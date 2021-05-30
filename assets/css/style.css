@@ -1,0 +1,22 @@
+:root {
+    --red: #ff4100;
+    --blue: #0024ff;
+    --green: #12c500;
+    --yellow: #bcba00;
+    --flash-red: #ff9672;
+    --flash-blue: #9fafff;
+    --flash-green: #a3ff99;
+    --flash-yellow: #fffd62;
+    --dark-red: #570000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .frame {
+      height: 100vh;
+      width: 100vw;
+      background-color: gray;
+  }

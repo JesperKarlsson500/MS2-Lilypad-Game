@@ -22,8 +22,8 @@
   }
 
   .container-circle {
-      height: 50%;
-      width: 50%;
+      height: 400px;
+      width: 400px;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -31,3 +31,102 @@
       background-color: black;
       border-radius: 50%;
   }
+
+  .top-right {
+      background-color: var(--green);
+      height: 180px;
+      width: 180px;
+      top: 26%;
+      left: 26%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      border-radius: 100% 0 0 0;
+  }
+
+  .bottom-right {
+      background-color: var(--red);
+      height: 180px;
+      width: 180px;
+      top: 26%;
+      left: 74%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      border-radius: 0 100% 0 0;
+  }
+
+  .bottom-left {
+    background-color: var(--blue);
+      height: 180px;
+      width: 180px;
+      top: 74%;
+      left: 74%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      border-radius: 0 0 100% 0;
+  }
+
+  .top-left {
+    background-color: yellow;
+      height: 180px;
+      width: 180px;
+      top: 74%;
+      left: 26%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      border-radius: 0 0 0 100%;
+  }
+
+  .inner-circle {
+      height: 160px;
+      width: 160px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      background-color: gray;
+      border-radius: 50%;
+      border: 10px solid black;
+  }
+
+  .counter {
+      position: absolute;
+      top: 74%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: inline-block;
+      height: 30px;
+      width: 60px;
+      background-color: var(--dark-red);
+      border: 5px solid black;
+  }
+
+  .score {
+      color: red;
+      text-align: center;
+      font-size: 1.6em;
+  }
+
+  .game-name {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 2em;
+  }
+
+  .power {
+      position: absolute;
+      top: 45%;
+      left: 74%;
+      transform: translate(-50%,-50%);
+      font-size: 1.5em;
+  }
+
+  .start {
+      position: absolute;
+      top: 45%;
+      left: 26%;
+      transform: translate(-50%,-50%);
+      font-size: 1.5em;
+  }
+  

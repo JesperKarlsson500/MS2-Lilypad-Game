@@ -24,4 +24,14 @@ document.getElementById('on').addEventListener('click', PowerOnOffButton);
     // Starts the game and the computer will blink one random color
     function StartGame () {
 
+
     }
+
+    // creating a for loop to push 15 randoms number between 1 and 4 to the console
+    order = [];
+
+    for (let i = 0; i < 15; i++) {
+        order.push(Math.floor(Math.random() * 4) + 1);
+    }
+    console.log(order);
+

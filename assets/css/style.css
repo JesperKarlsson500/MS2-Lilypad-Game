@@ -76,6 +76,10 @@
       border-radius: 0 0 0 100%;
   }
 
+  .transparent {
+      opacity: 0,5;
+  }
+
   .inner-circle {
       height: 160px;
       width: 160px;

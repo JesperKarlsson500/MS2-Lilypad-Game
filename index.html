@@ -9,19 +9,20 @@
 <body>
     <div class="frame">
         <div class="container-circle">
-            <span class="top-right"></span>
-            <span class="bottom-right"></span>
-            <span class="bottom-left"></span>
-            <span class="top-left"></span>
+            <span id="top-left" class="toggle opacity"></span>
+            <span id="top-right" class="toggle opacity"></span>
+            <span id="bottom-right" class="toggle opacity"></span>
+            <span id="bottom-left" class="toggle opacity"></span>
             
             <span class="inner-circle">
                 <span class="game-name"><b>Simon</b></span>
-                <button type="button" class="toggle" id="on">Power</button>
-                <button type="button" class="toggle" id="start">Start</button>
+                <button type="button" id="on">Power</button>
+                <button type="button" id="start">Start</button>
                 <span class="counter"><p class="score"></p></span>
             </span>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

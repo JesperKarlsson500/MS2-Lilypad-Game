@@ -32,7 +32,7 @@
       border-radius: 50%;
   }
 
-  #top-left {
+  .top-left {
       background-color: var(--green);
       height: 180px;
       width: 180px;
@@ -43,7 +43,7 @@
       border-radius: 100% 0 0 0;
   }
 
-  #top-right {
+  .top-right {
       background-color: var(--red);
       height: 180px;
       width: 180px;
@@ -54,7 +54,7 @@
       border-radius: 0 100% 0 0;
   }
 
-  #bottom-right {
+  .bottom-right {
     background-color: var(--blue);
       height: 180px;
       width: 180px;
@@ -65,7 +65,7 @@
       border-radius: 0 0 100% 0;
   }
 
-  #bottom-left {
+  .bottom-left {
     background-color: yellow;
       height: 180px;
       width: 180px;
@@ -105,7 +105,7 @@
   }
 
   .score {
-      color: red;
+      color: var(--red);
       text-align: center;
       font-size: 1.6em;
       font-weight: bold;
@@ -120,7 +120,7 @@
   }
 
   #on {
-      background-color: red;
+      background-color: var(--red);
       position: absolute;
       top: 45%;
       left: 74%;
@@ -129,6 +129,7 @@
   }
 
   #start {
+      background-color: black;
       position: absolute;
       top: 45%;
       left: 26%;

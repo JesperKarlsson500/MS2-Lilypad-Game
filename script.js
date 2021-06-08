@@ -1,4 +1,4 @@
-let order = [];
+    let order = [];
     let playerOrder = [];
     let flash;
     let compTurn;
@@ -9,6 +9,7 @@ let order = [];
     let start = false;
     let colors = [];
     let on = false;
+    let noise = true;
 
     let scoreCounter = document.querySelector(".score");
     const topRight = document.querySelector(".top-right");
@@ -16,30 +17,100 @@ let order = [];
     const bottomLeft = document.querySelector(".bottom-left");
     const topLeft = document.querySelector(".top-left");
     let startButton = document.querySelector("#start");
-    let disableButton = document.querySelector('#on')
-    let powerStyle = document.getElementById('on').style;
-    let startStyle = document.getElementById('start').style;
-    const buttonState = document.querySelector('#test')
+    let onButton = document.querySelector('#on')
     
-// Power on
-function powerOnOffButton () {
-    if (powerStyle.backgroundColor === "var(--red)") {
-        powerStyle.backgroundColor = "var(--green)";
-        scoreCounter.innerHTML = "-";
-        startStyle.backgroundColor = "white";
-    } else {
-        powerStyle.backgroundColor = "var(--red)";
-        scoreCounter.innerHTML = "";
-        startStyle.backgroundColor = "black";
-        clearColor();
-        clearInterval(intervalId);
-        // resets the score
+    
+
+onButton.addEventListener('click', () => {
+    if (onButton.checked == true) {
+        play();
+    } 
+});
+
+function play () {
+  win = false;
+  order = [];
+  playOrder = [];
+  flash = [];
+  intervalId = 0;
+  turn = 1;
+  good = true;
+  for (let i = 0; i < 15; i++) {
+  order.push(Math.floor(Math.random() * 4) + 1);
+  }
+  compTurn = true;
+
+  intervalId = setInterval(gameTurn, 800);
+}
+
+function gameTurn() {
+on = false; //player will not be able to click any buttons.
+    
+  if (flash == turn) {
+    clearInterval(intervalId);
+    compTurn = false;
+    clearColors();
+    on = true;
+  }
+
+  if (compTurn) {
+    clearColor();
+      setTimeout(() => {
+            if (order[flash] == 1) one(); //if the first item in the array is one
+            if (order[flash] == 2) two();
+            if (order[flash] == 3) three();
+            if (order[flash] == 4) four();
+            flash++;
+        }, 200);
     }
 }
-document.getElementById('on').addEventListener('click', powerOnOffButton);
+
+function one() {
+    if (noise) {
+        let audio = get.documentById("clip1");
+        audio.play();
+    }
+    noise = true;
+    topLeft.style.backgroundColor = "var(--flashgreen)";
+}
+
+function two() {
+    if (noise) {
+        let audio = get.documentById("clip2");
+        audio.play();
+    }
+    noise = true;
+    topRight.style.backgroundColor = "var(--flashred)";
+}
+
+function three() {
+    if (noise) {
+        let audio = get.documentById("clip3");
+        audio.play();
+    }
+    noise = true;
+    bottomRight.style.backgroundColor = "var(--flashblue)";
+}
+
+function four() {
+    if (noise) {
+        let audio = get.documentById("clip4");
+        audio.play();
+    }
+    noise = true;
+    bottomRight.style.backgroundColor = "var(--flashyellow)";
+}
+
+function clearColor() {
+    topLeft.style.backgroundColor = "var(--green)";
+    topRight.style.backgroundColor = "var(--red)";
+    bottomRight.style.backgroundColor = "var(--blue)";
+    bottomleft.style.backgroundColor = "var(--yellow)";
+}
+
 
 // StartButton
-startButton.addEventListener('click', () => {
+/*startButton.addEventListener('click', () => {
     if (on || win) {
         play();
     }
@@ -86,15 +157,15 @@ function gameTurn() {
 
 function one() {
     if (noise) {
-        var audio = document.querySelector("");
+        let audio = get.documentById("clip1");
         audio.play();
     }
     noise = true;
-    topLeft.style.backgroundColor = "pink"
+    topLeft.style.backgroundColor = (--flashgreen);
 }
 
 function clearColor() {
-    topLeft.style.backgroundColor = "gray"
+    topLeft.style.backgroundColor = (--green);
 }
 
 //$(document).ready(function(){
@@ -127,3 +198,4 @@ function clearColor() {
     // creating a for loop to push 15 randoms number between 1 and 4 to the console
 
     //let currentTry = 1;
+    */

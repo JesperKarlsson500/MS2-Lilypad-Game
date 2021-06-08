@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Simon Game</title>
+    
     <audio id="clip1">
-  	<source src="assets/audio/simon-blip-1.mp3"></source>
-        </audio>
+  	    <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+    </audio>
     <audio id="clip2">
-  	    <source src="assets/audio/simon-blip-2.mp3"></source>
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
     </audio>
     <audio id="clip3">
-        <source src="assets/audio/simon-blip-3.mp3"></source>
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
     </audio>
     <audio id="clip4">
-        <source src="assets/audio/simon-blip-4.mp3"></source>
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
     </audio>
 
 </head>
@@ -29,9 +30,11 @@
             
             <span class="inner-circle">
                 <span class="game-name"><b>Simon</b></span>
-                <button type="button" id="on">Power</button>
-                <button type="button" id="start">Start</button>
-                <span class="counter"><p class="score"></p></span>
+                <input type="checkbox" class="toggle" id="on"></input>
+                <!--<button type="button" class="ontest" id="on">Power</button>
+                <button type="button" class="starttest" id="start">Start</button>
+                <input type="checkbox" class="toggle" id="start"></input>
+                <span class="counter"><p class="score"></p></span>-->
             </span>
         </div>
     </div>

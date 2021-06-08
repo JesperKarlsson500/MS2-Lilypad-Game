@@ -11,29 +11,35 @@
     let on = false;
     let noise = true;
 
-    let scoreCounter = document.querySelector(".score");
+    const scoreCounter = document.querySelector(".score");
     const topRight = document.querySelector(".top-right");
     const bottomRight = document.querySelector(".bottom-right");
     const bottomLeft = document.querySelector(".bottom-left");
     const topLeft = document.querySelector(".top-left");
-    let startButton = document.querySelector("#start");
-    let onButton = document.querySelector('#on')
-    
-    
+    const startButton = document.querySelector("#start");
+    const onButton = document.querySelector('#on')
 
 onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
+        on = true;
         play();
     } 
+    if (onButton.checked == false) {
+        on = false;
+        scoreCounter.innerHTML = "";
+        clearColors();
+        clearInterval(intervalId);
+    }
 });
 
 function play () {
-  win = false;
+   win = false;
   order = [];
-  playOrder = [];
-  flash = [];
+  playerOrder = [];
+  flash = 0;
   intervalId = 0;
   turn = 1;
+  scoreCounter.innerHTML = 1;
   good = true;
   for (let i = 0; i < 15; i++) {
   order.push(Math.floor(Math.random() * 4) + 1);
@@ -44,7 +50,7 @@ function play () {
 }
 
 function gameTurn() {
-on = false; //player will not be able to click any buttons.
+  on = false; //player will not be able to click any buttons.
     
   if (flash == turn) {
     clearInterval(intervalId);
@@ -54,7 +60,7 @@ on = false; //player will not be able to click any buttons.
   }
 
   if (compTurn) {
-    clearColor();
+    clearColors();
       setTimeout(() => {
             if (order[flash] == 1) one(); //if the first item in the array is one
             if (order[flash] == 2) two();
@@ -67,7 +73,7 @@ on = false; //player will not be able to click any buttons.
 
 function one() {
     if (noise) {
-        let audio = get.documentById("clip1");
+        let audio = document.getElementById("clip1");
         audio.play();
     }
     noise = true;
@@ -76,16 +82,16 @@ function one() {
 
 function two() {
     if (noise) {
-        let audio = get.documentById("clip2");
+        let audio = document.getElementById("clip2");
         audio.play();
     }
     noise = true;
-    topRight.style.backgroundColor = "var(--flashred)";
+    topright.style.backgroundColor = "var(--flashred)";
 }
 
 function three() {
     if (noise) {
-        let audio = get.documentById("clip3");
+        let audio = document.getElementById("clip3");
         audio.play();
     }
     noise = true;
@@ -94,20 +100,26 @@ function three() {
 
 function four() {
     if (noise) {
-        let audio = get.documentById("clip4");
+        let audio = document.getElementById("clip4");
         audio.play();
     }
     noise = true;
-    bottomRight.style.backgroundColor = "var(--flashyellow)";
+    bottomLeft.style.backgroundColor = "var(--flashyellow)";
 }
 
-function clearColor() {
+function clearColors() {
     topLeft.style.backgroundColor = "var(--green)";
     topRight.style.backgroundColor = "var(--red)";
     bottomRight.style.backgroundColor = "var(--blue)";
-    bottomleft.style.backgroundColor = "var(--yellow)";
+    bottomLeft.style.backgroundColor = "var(--yellow)";
 }
 
+function flashColor() {
+  topLeft.style.backgroundColor = "var(--flashgreen";
+  topRight.style.backgroundColor = "var(--flashred";
+  bottomLeft.style.backgroundColor = "var(--flashblue";
+  bottomRight.style.backgroundColor = "var(--flashyellow";
+}
 
 // StartButton
 /*startButton.addEventListener('click', () => {

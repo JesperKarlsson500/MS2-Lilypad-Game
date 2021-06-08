@@ -6,7 +6,7 @@
     --flashred: #ff9672;
     --flashblue: #9fafff;
     --flashgreen: #a3ff99;
-    --flashyellow: #fffd62;
+    --flashyellow: #fffec2;
     --dark-red: #570000;
 }
 
@@ -66,7 +66,7 @@
   }
 
   .bottom-left {
-    background-color: yellow;
+    background-color: var(--yellow);
       height: 180px;
       width: 180px;
       top: 74%;

@@ -43,6 +43,7 @@ function play () {
   good = true;
   for (let i = 0; i < 15; i++) {
   order.push(Math.floor(Math.random() * 4) + 1);
+  console.log(order);
   }
   compTurn = true;
 
@@ -86,7 +87,7 @@ function two() {
         audio.play();
     }
     noise = true;
-    topright.style.backgroundColor = "var(--flashred)";
+    topRight.style.backgroundColor = "var(--flashred)";
 }
 
 function three() {
@@ -120,6 +121,19 @@ function flashColor() {
   bottomLeft.style.backgroundColor = "var(--flashblue";
   bottomRight.style.backgroundColor = "var(--flashyellow";
 }
+
+topLeft.addEventListener('click', () => {
+    if (on) {
+        playerOrder.push(1);
+        //check();
+       one();
+       if(!win) {
+       setTimeout(() => {
+           clearColors();
+       }, 200)
+       }
+    }
+})
 
 // StartButton
 /*startButton.addEventListener('click', () => {

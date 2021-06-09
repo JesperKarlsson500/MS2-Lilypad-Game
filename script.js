@@ -22,6 +22,7 @@
 onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
         on = true;
+        win = true;
         play();
     } 
     if (onButton.checked == false) {
@@ -43,7 +44,6 @@ function play () {
   good = true;
   for (let i = 0; i < 15; i++) {
   order.push(Math.floor(Math.random() * 4) + 1);
-  console.log(order);
   }
   compTurn = true;
 
@@ -62,15 +62,15 @@ function gameTurn() {
 
   if (compTurn) {
     clearColors();
-      setTimeout(() => {
-            if (order[flash] == 1) one(); //if the first item in the array is one
-            if (order[flash] == 2) two();
-            if (order[flash] == 3) three();
-            if (order[flash] == 4) four();
-            flash++;
-        }, 200);
+    setTimeout(() => {
+      if (order[flash] == 1) one(); //if the first item in the array is one
+      if (order[flash] == 2) two();
+      if (order[flash] == 3) three();
+      if (order[flash] == 4) four();
+      flash++;
+      }, 200);
     }
-}
+ }
 
 function one() {
     if (noise) {
@@ -123,72 +123,73 @@ function flashColor() {
 }
 
 topLeft.addEventListener('click', () => {
-    if (on) {
-        playerOrder.push(1);
-        check();
-       one();
-       if(!win) {
-       setTimeout(() => {
-           clearColors();
-       }, 250)
-       }
+  if (on) {
+    playerOrder.push(1);
+    check();
+    one();
+    if(!win) {
+      setTimeout(() => {
+        clearColors();
+      }, 250)
     }
+  }
 })
 
 topRight.addEventListener('click', () => {
-    if (on) {
-        playerOrder.push(2);
-        check();
-       two();
-       if(!win) {
-       setTimeout(() => {
-           clearColors();
-       }, 250)
-       }
+  if (on) {
+    playerOrder.push(1);
+    check();
+    two();
+    if(!win) {
+      setTimeout(() => {
+        clearColors();
+      }, 250)
     }
+  }
 })
 
 bottomRight.addEventListener('click', () => {
-    if (on) {
-        playerOrder.push(3);
-        check();
-       three();
-       if(!win) {
-       setTimeout(() => {
-           clearColors();
-       }, 250)
-       }
+  if (on) {
+    playerOrder.push(1);
+    check();
+    three();
+    if(!win) {
+      setTimeout(() => {
+        clearColors();
+      }, 250)
     }
+  }
 })
 
 bottomLeft.addEventListener('click', () => {
-    if (on) {
-        playerOrder.push(4);
-        check();
-       four();
-       if(!win) {
-       setTimeout(() => {
-           clearColors();
-       }, 250)
-       }
+  if (on) {
+    playerOrder.push(1);
+    check();
+    four();
+    if(!win) {
+      setTimeout(() => {
+        clearColors();
+      }, 250)
     }
+  }
 })
 
 function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1]) 
     good = false;
 
-  if (playerOrder.length == 15 && good)
+  if (playerOrder.length == 15 && good) {
     winGame();
   }
 
-  if (good = false) {
+  if (good == false) {
     flashColor();
     scoreCounter.innerHTML = "NO!"
     setTimeout(() => {
-      scoreCounter.innerHTML = turn;
+      scoreCounter.innerHTML = score;
       clearColors();
     }, 800);
+    
     noise = false;
     
   }   
@@ -199,7 +200,9 @@ function check() {
     flash =  0; 
     scoreCounter.innerHTML = score;
     intervalId = setInterval(gameTurn, 800);
+  }
 }
+
 function winGame() {
     flashColor();
     scoreCounter.innerHTML = "WIN!"

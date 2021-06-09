@@ -118,8 +118,8 @@ function clearColors() {
 function flashColor() {
   topLeft.style.backgroundColor = "var(--flashgreen";
   topRight.style.backgroundColor = "var(--flashred";
-  bottomLeft.style.backgroundColor = "var(--flashblue";
-  bottomRight.style.backgroundColor = "var(--flashyellow";
+  bottomRight.style.backgroundColor = "var(--flashblue";
+  bottomLeft.style.backgroundColor = "var(--flashyellow";
 }
 
 topLeft.addEventListener('click', () => {
@@ -137,7 +137,7 @@ topLeft.addEventListener('click', () => {
 
 topRight.addEventListener('click', () => {
   if (on) {
-    playerOrder.push(1);
+    playerOrder.push(2);
     check();
     two();
     if(!win) {
@@ -150,7 +150,7 @@ topRight.addEventListener('click', () => {
 
 bottomRight.addEventListener('click', () => {
   if (on) {
-    playerOrder.push(1);
+    playerOrder.push(3);
     check();
     three();
     if(!win) {
@@ -163,7 +163,7 @@ bottomRight.addEventListener('click', () => {
 
 bottomLeft.addEventListener('click', () => {
   if (on) {
-    playerOrder.push(1);
+    playerOrder.push(4);
     check();
     four();
     if(!win) {
@@ -207,6 +207,7 @@ function winGame() {
     flashColor();
     scoreCounter.innerHTML = "WIN!"
     on = false;
+    win = true;
 }
 
 // StartButton

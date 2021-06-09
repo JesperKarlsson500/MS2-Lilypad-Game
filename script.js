@@ -33,12 +33,12 @@ onButton.addEventListener('click', () => {
 });
 
 function play () {
-   win = false;
+  win = false;
   order = [];
   playerOrder = [];
   flash = 0;
   intervalId = 0;
-  turn = 1;
+  score = 1;
   scoreCounter.innerHTML = 1;
   good = true;
   for (let i = 0; i < 15; i++) {
@@ -53,7 +53,7 @@ function play () {
 function gameTurn() {
   on = false; //player will not be able to click any buttons.
     
-  if (flash == turn) {
+  if (flash == score) {
     clearInterval(intervalId);
     compTurn = false;
     clearColors();
@@ -125,15 +125,86 @@ function flashColor() {
 topLeft.addEventListener('click', () => {
     if (on) {
         playerOrder.push(1);
-        //check();
+        check();
        one();
        if(!win) {
        setTimeout(() => {
            clearColors();
-       }, 200)
+       }, 250)
        }
     }
 })
+
+topRight.addEventListener('click', () => {
+    if (on) {
+        playerOrder.push(2);
+        check();
+       two();
+       if(!win) {
+       setTimeout(() => {
+           clearColors();
+       }, 250)
+       }
+    }
+})
+
+bottomRight.addEventListener('click', () => {
+    if (on) {
+        playerOrder.push(3);
+        check();
+       three();
+       if(!win) {
+       setTimeout(() => {
+           clearColors();
+       }, 250)
+       }
+    }
+})
+
+bottomLeft.addEventListener('click', () => {
+    if (on) {
+        playerOrder.push(4);
+        check();
+       four();
+       if(!win) {
+       setTimeout(() => {
+           clearColors();
+       }, 250)
+       }
+    }
+})
+
+function check() {
+  if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1]) 
+    good = false;
+
+  if (playerOrder.length == 15 && good)
+    winGame();
+  }
+
+  if (good = false) {
+    flashColor();
+    scoreCounter.innerHTML = "NO!"
+    setTimeout(() => {
+      scoreCounter.innerHTML = turn;
+      clearColors();
+    }, 800);
+    noise = false;
+    
+  }   
+  if (score == playerOrder.length && good && !win) {
+    score++;
+    playerOrder = [];
+    compTurn = true;
+    flash =  0; 
+    scoreCounter.innerHTML = score;
+    intervalId = setInterval(gameTurn, 800);
+}
+function winGame() {
+    flashColor();
+    scoreCounter.innerHTML = "WIN!"
+    on = false;
+}
 
 // StartButton
 /*startButton.addEventListener('click', () => {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Simon Game</title>
-    
+    <!--Sound effects-->
     <audio id="clip1">
   	    <source src="assets/audio/simon-blip-1.mp3"></source>
     </audio>
@@ -18,27 +18,58 @@
     <audio id="clip4">
         <source src="assets/audio/simon-blip-4.mp3"></source>
     </audio>
-
+    <audio id="clip5">
+        <source src="assets/audio/simon-blip-4.mp3"></source>
+    </audio>
+    <audio id="clip6">
+        <source src="assets/audio/simon-blip-4.mp3"></source>
+    </audio>
 </head>
 <body>
-    <div class="frame">
-        <div class="container-circle">
-            <span class="top-left toggle"></span>
-            <span class="top-right toggle"></span>
-            <span class="bottom-right toggle"></span>
-            <span class="bottom-left toggle"></span>
+  <div class="frame">
+    <div class="container">
+      <!--Lili pads-->
+      <span class="top-right toggle"></span>
+      <span class="right toggle"></span>
+      <span class="bottom-right toggle"></span>
+      <span class="top-left toggle"></span>
+      <span class="left toggle"></span>
+      <span class="bottom-left toggle"></span>
+      <!--Cut leaf-->
+      <span class="cutleaf"></span>
+      <span class="rightleafcut"></span>
+      <span class="bottomrightleafcut"></span>
+      <span class="bottomleftleafcut"></span>
+      <span class="leftleafcut"></span>
+      <span class="topleftleafcut"></span>
             
-            <span class="inner-circle">
-                <span class="game-name"><b>Simon</b></span>
-                <input type="checkbox" class="toggle" id="on"></input>
-                <!--<button type="button" class="ontest" id="on">Power</button>
-                <button type="button" class="starttest" id="start">Start</button>
-                <input type="checkbox" class="toggle" id="start"></input>-->
-                <span class="counter"><p class="score"></p></span>
-            </span>
+        <span class="inner-circle">
+          <!--Lili flower-->
+          <span class="flowerleaftop"></span>
+          <span class="flowerleaftopright"></span>
+          <span class="flowerleafright"></span>
+          <span class="flowerleafbottomright"></span>
+          <span class="flowerleafbottom"></span>
+          <span class="flowerleafbottomleft"></span>
+          <span class="flowerleafleft"></span>
+          <span class="flowerleaftopleft"></span>
+          <!--score counter-->
+          <span class="game-name"><b>Lili</b></span>
+          <input type="checkbox" class="toggle" id="on"></input>
+          <span class="counter"><p class="score"></p></span>
+        </span>
         </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+          <!--Frog-->
+          <div class="frog">
+            <span class="righteye"></span>
+            <span class="rightiris"></span>
+            <span class="lefteye"></span>
+            <span class="leftiris"></span>
+            <span class="mouth"></span>
+            <span class="mouthcover"></span>
+          </div>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

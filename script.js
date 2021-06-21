@@ -13,11 +13,14 @@
 
     const scoreCounter = document.querySelector(".score");
     const topRight = document.querySelector(".top-right");
+    const right = document.querySelector(".right");
     const bottomRight = document.querySelector(".bottom-right");
     const bottomLeft = document.querySelector(".bottom-left");
+    const left = document.querySelector(".left");
     const topLeft = document.querySelector(".top-left");
     const startButton = document.querySelector("#start");
     const onButton = document.querySelector('#on')
+    const talkbubble = documentquerySelector(".talkbubble");
 
 onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
@@ -43,11 +46,11 @@ function play () {
   scoreCounter.innerHTML = 1;
   good = true;
   for (let i = 0; i < 15; i++) {
-  order.push(Math.floor(Math.random() * 4) + 1);
+  order.push(Math.floor(Math.random() * 6) + 1);
   }
   compTurn = true;
 
-  intervalId = setInterval(gameTurn, 800);
+  intervalId = setInterval(gameTurn, 600);
 }
 
 function gameTurn() {
@@ -67,10 +70,14 @@ function gameTurn() {
       if (order[flash] == 2) two();
       if (order[flash] == 3) three();
       if (order[flash] == 4) four();
+      if (order[flash] == 5) five();
+      if (order[flash] == 6) six();
       flash++;
       }, 200);
     }
  }
+
+
 
 function one() {
     if (noise) {
@@ -78,7 +85,7 @@ function one() {
         audio.play();
     }
     noise = true;
-    topLeft.style.backgroundColor = "var(--flashgreen)";
+    topRight.style.backgroundColor = "var(--flashred)";
 }
 
 function two() {
@@ -87,7 +94,7 @@ function two() {
         audio.play();
     }
     noise = true;
-    topRight.style.backgroundColor = "var(--flashred)";
+    bottomLeft.style.backgroundColor = "var(--flashforestgreen)";
 }
 
 function three() {
@@ -108,25 +115,48 @@ function four() {
     bottomLeft.style.backgroundColor = "var(--flashyellow)";
 }
 
+function five() {
+    if (noise) {
+        let audio = document.getElementById("clip4");
+        audio.play();
+    }
+    noise = true;
+    bottomLeft.style.backgroundColor = "var(--flashpurple)";
+}
+
+function six() {
+    if (noise) {
+        let audio = document.getElementById("clip4");
+        audio.play();
+    }
+    noise = true;
+    topLeft.style.backgroundColor = "var(--flashgreen)";
+}
+
 function clearColors() {
-    topLeft.style.backgroundColor = "var(--green)";
     topRight.style.backgroundColor = "var(--red)";
+    right.style.backgroundColor = "var(--flashforestgreen)";
     bottomRight.style.backgroundColor = "var(--blue)";
     bottomLeft.style.backgroundColor = "var(--yellow)";
+    left.style.backgroundColor = "var(--flashpurple)";
+    topLeft.style.backgroundColor = "var(--green)";
 }
 
 function flashColor() {
-  topLeft.style.backgroundColor = "var(--flashgreen";
-  topRight.style.backgroundColor = "var(--flashred";
-  bottomRight.style.backgroundColor = "var(--flashblue";
-  bottomLeft.style.backgroundColor = "var(--flashyellow";
+    topRight.style.backgroundColor = "var(--flashred)";
+    right.style.backgroundColor = "var(--flashforestgreen)";
+    bottomRight.style.backgroundColor = "var(--flashblue)";
+    bottomLeft.style.backgroundColor = "var(--flashyellow)";
+    left.style.backgroundColor = "var(--flashpurple)";
+    topLeft.style.backgroundColor = "var(--flashgreen)";
 }
 
-topLeft.addEventListener('click', () => {
+
+topRight.addEventListener('click', () => {
   if (on) {
     playerOrder.push(1);
     check();
-    one();
+    two();
     if(!win) {
       setTimeout(() => {
         clearColors();
@@ -135,7 +165,7 @@ topLeft.addEventListener('click', () => {
   }
 })
 
-topRight.addEventListener('click', () => {
+right.addEventListener('click', () => {
   if (on) {
     playerOrder.push(2);
     check();
@@ -174,6 +204,32 @@ bottomLeft.addEventListener('click', () => {
   }
 })
 
+left.addEventListener('click', () => {
+  if (on) {
+    playerOrder.push(5);
+    check();
+    five();
+    if(!win) {
+      setTimeout(() => {
+        clearColors();
+      }, 250)
+    }
+  }
+})
+
+topLeft.addEventListener('click', () => {
+  if (on) {
+    playerOrder.push(6);
+    check();
+    one();
+    if(!win) {
+      setTimeout(() => {
+        clearColors();
+      }, 250)
+    }
+  }
+})
+
 function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1]) 
     good = false;
@@ -184,11 +240,11 @@ function check() {
 
   if (good == false) {
     flashColor();
-    scoreCounter.innerHTML = "NO!"
+    scoreCounter.innerHTML = "OPS!"
     setTimeout(() => {
       scoreCounter.innerHTML = score;
       clearColors();
-    }, 800);
+    }, 600);
     
     noise = false;
     
@@ -199,7 +255,7 @@ function check() {
     compTurn = true;
     flash =  0; 
     scoreCounter.innerHTML = score;
-    intervalId = setInterval(gameTurn, 800);
+    intervalId = setInterval(gameTurn, 600);
   }
 }
 

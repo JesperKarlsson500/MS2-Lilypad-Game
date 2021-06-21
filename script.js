@@ -24,12 +24,13 @@
 
 ambianceButton.addEventListener('click', () => {
     if (ambianceButton.checked == true) {
-    let ambiance = document.getElementById("ambiance").loop = true;
+    let ambiance = document.getElementById("ambiance");
         ambiance.play();
     }
     if (ambianceButton.checked == false) {
         ambiance.pause();
     }
+    
 });
 
 onButton.addEventListener('click', () => {

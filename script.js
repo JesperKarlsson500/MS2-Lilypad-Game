@@ -19,8 +19,7 @@
     const left = document.querySelector(".left");
     const topLeft = document.querySelector(".top-left");
     const startButton = document.querySelector("#start");
-    const onButton = document.querySelector('#on')
-    const talkbubble = documentquerySelector(".talkbubble");
+    const onButton = document.querySelector('#on');
 
 onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
@@ -54,7 +53,7 @@ function play () {
 }
 
 function gameTurn() {
-  on = false; //player will not be able to click any buttons.
+  //on = false; //player will not be able to click any buttons.
     
   if (flash == score) {
     clearInterval(intervalId);
@@ -92,7 +91,7 @@ function two() {
         audio.play();
     }
     noise = true;
-    bottomLeft.style.backgroundColor = "var(--flashforestgreen)";
+    right.style.backgroundColor = "var(--flashforestgreen)";
 }
 
 function three() {
@@ -119,7 +118,7 @@ function five() {
         audio.play();
     }
     noise = true;
-    bottomLeft.style.backgroundColor = "var(--flashpurple)";
+    left.style.backgroundColor = "var(--flashpurple)";
 }
 
 function six() {
@@ -133,10 +132,10 @@ function six() {
 
 function clearColors() {
     topRight.style.backgroundColor = "var(--red)";
-    right.style.backgroundColor = "var(--flashforestgreen)";
+    right.style.backgroundColor = "var(--darkgreen)";
     bottomRight.style.backgroundColor = "var(--blue)";
     bottomLeft.style.backgroundColor = "var(--yellow)";
-    left.style.backgroundColor = "var(--flashpurple)";
+    left.style.backgroundColor = "var(--purple)";
     topLeft.style.backgroundColor = "var(--green)";
 }
 
@@ -154,7 +153,7 @@ topRight.addEventListener('click', () => {
   if (on) {
     playerOrder.push(1);
     check();
-    two();
+    one();
     if(!win) {
       setTimeout(() => {
         clearColors();
@@ -219,7 +218,7 @@ topLeft.addEventListener('click', () => {
   if (on) {
     playerOrder.push(6);
     check();
-    one();
+    six();
     if(!win) {
       setTimeout(() => {
         clearColors();
@@ -258,6 +257,10 @@ function check() {
 }
 
 function winGame() {
+    flashColor();
+    setTimeout(() => {
+      clearColors();
+    }, 200);
     flashColor();
     scoreCounter.innerHTML = "WIN!"
     on = false;

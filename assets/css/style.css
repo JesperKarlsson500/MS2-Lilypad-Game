@@ -123,17 +123,6 @@
       border-radius: 50%;
   }
 
-  .top-left {
-      background-color: var(--green);
-      height: 135px;
-      width: 135px;
-      top: 20%;
-      left: 31.5%;
-      transform: translate(-50%,-50%);
-      position: absolute;
-      border-radius: 100%;
-  }
-
   .top-right {
       background-color: var(--red);
       height: 135px;
@@ -145,19 +134,8 @@
       border-radius: 100%;
   }
 
-  .left {
-      background-color: rgb(123, 0, 161);
-      height: 135px;
-      width: 135px;
-      top: 50%;
-      left: 16%;
-      transform: translate(-50%,-50%);
-      position: absolute;
-      border-radius: 100%;
-  }
-
   .right {
-      background-color: rgb(52, 104, 45);
+      background-color: var(--darkgreen);
       height: 135px;
       width: 135px;
       top: 50%;
@@ -189,6 +167,29 @@
       border-radius: 100%;
   }
 
+   .left {
+      background-color: rgb(123, 0, 161);
+      height: 135px;
+      width: 135px;
+      top: 50%;
+      left: 16%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      border-radius: 100%;
+  }
+
+    .top-left {
+      background-color: var(--green);
+      height: 135px;
+      width: 135px;
+      top: 20%;
+      left: 31.5%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      border-radius: 100%;
+  }
+
+  /* Lili flower */
   .inner-circle {
       height: 140px;
       width: 140px;
@@ -199,7 +200,7 @@
       background-color: var(--oceanblue);
       border-radius: 50%;    
   }
-
+    /* The cut into the leafs */
     .cutleaf {
       height: 40px;
       width: 40px;
@@ -271,7 +272,7 @@
       border-radius: 80% 0;
       transform: rotate(198deg);
     }
-
+    /* white and pink flower leafs */
     .flowerleaftop {
       height: 50px;
       width: 50px;
@@ -283,7 +284,6 @@
       border-radius: 70% 0;
       transform: rotate(-30deg);
       border: 5px solid pink;
-      
     }
 
     .flowerleaftopright {
@@ -377,6 +377,7 @@
       border: 5px solid pink;
     }
 
+    /* Score Counter */
   .counter {
       position: absolute;
       top: 50%;

@@ -20,6 +20,17 @@
     const topLeft = document.querySelector(".top-left");
     const startButton = document.querySelector("#start");
     const onButton = document.querySelector('#on');
+    const ambianceButton = document.querySelector("#ambiance-on-off");
+
+ambianceButton.addEventListener('click', () => {
+    if (ambianceButton.checked == true) {
+    let ambiance = document.getElementById("ambiance").loop = true;
+        ambiance.play();
+    }
+    if (ambianceButton.checked == false) {
+        ambiance.pause();
+    }
+});
 
 onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
@@ -157,7 +168,7 @@ topRight.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 350)
+      }, 400)
     }
   }
 })
@@ -170,7 +181,7 @@ right.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 350)
+      }, 400)
     }
   }
 })
@@ -183,7 +194,7 @@ bottomRight.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 350)
+      }, 400)
     }
   }
 })
@@ -196,7 +207,7 @@ bottomLeft.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 350)
+      }, 400)
     }
   }
 })
@@ -209,7 +220,7 @@ left.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 350)
+      }, 400)
     }
   }
 })
@@ -222,7 +233,7 @@ topLeft.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 350)
+      }, 400)
     }
   }
 })
@@ -252,7 +263,7 @@ function check() {
     compTurn = true;
     flash =  0; 
     scoreCounter.innerHTML = score;
-    intervalId = setInterval(gameTurn, 600);
+    intervalId = setInterval(gameTurn, 1000);
   }
 }
 

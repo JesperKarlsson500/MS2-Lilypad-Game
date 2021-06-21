@@ -26,6 +26,13 @@
       background-color: var(--oceanblue);
   }
 
+  .on-off-music {
+    top: 15%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+  }
+
   .frog {
       height: 80px;
       width: 100px;

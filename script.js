@@ -49,7 +49,7 @@ function play () {
   }
   compTurn = true;
 
-  intervalId = setInterval(gameTurn, 600);
+  intervalId = setInterval(gameTurn, 1000);
 }
 
 function gameTurn() {
@@ -157,7 +157,7 @@ topRight.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 250)
+      }, 350)
     }
   }
 })
@@ -170,7 +170,7 @@ right.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 250)
+      }, 350)
     }
   }
 })
@@ -183,7 +183,7 @@ bottomRight.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 250)
+      }, 350)
     }
   }
 })
@@ -196,7 +196,7 @@ bottomLeft.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 250)
+      }, 350)
     }
   }
 })
@@ -209,7 +209,7 @@ left.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 250)
+      }, 350)
     }
   }
 })
@@ -222,7 +222,7 @@ topLeft.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 250)
+      }, 350)
     }
   }
 })

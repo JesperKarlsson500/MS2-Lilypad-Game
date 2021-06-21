@@ -113,8 +113,6 @@
       border: solid 4px darkgreen;
   }
 
- 
-
   .container {
       height: 400px;
       width: 400px;
@@ -393,6 +391,7 @@
   }
 
   .score {
+      top: 30%;
       color: var(--red);
       text-align: center;
       font-size: 2em;

@@ -77,8 +77,6 @@ function gameTurn() {
     }
  }
 
-
-
 function one() {
     if (noise) {
         let audio = document.getElementById("clip1");
@@ -117,7 +115,7 @@ function four() {
 
 function five() {
     if (noise) {
-        let audio = document.getElementById("clip4");
+        let audio = document.getElementById("clip5");
         audio.play();
     }
     noise = true;
@@ -126,7 +124,7 @@ function five() {
 
 function six() {
     if (noise) {
-        let audio = document.getElementById("clip4");
+        let audio = document.getElementById("clip6");
         audio.play();
     }
     noise = true;

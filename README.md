@@ -72,6 +72,9 @@ At 15 you won the game.
 ## Wireframes
 <hr>
 
+I started making the game to look like the Simon game
+
+I later on changed the look and and layout of the game to be more unique.
 ### Changes to wireframes
 
 ## Original ideas
@@ -79,9 +82,14 @@ At 15 you won the game.
 
 ## Features
 <hr>
-Start game button
-Ambiant music on/off button.
-Score counter
+
+* Start game button.
+* on/off button for the ambiant music.
+* Score counter if the middle of the lilyflower that increments after each succesful turn.
+* after reaching 15 turns you win the game and "WIN!" will show up to replace the numbers
+* All lilypads will flash their colors if you win the game (currently not working)
+* A frog that introduces you to the game and keeps it's eyes on the mouse.
+
 
 ## Technologies
 <hr>
@@ -96,9 +104,16 @@ This project was build using the following technologies:
 
 ## Testing
 <hr>
-Changed splash sound on the red and yellow leaf since they sounded a bit harsh.
+Changed splash sound on the red and yellow leaf since they sounded a bit harsh. 
+
+The game doesn't reset when the win condition is met, So I need to fix that.
+
+I found so far that if you win the game nothing happens. I will look into this.
 
 ### Testing plan
+
+My testing plan is to play the game and make sure it works on desktop.
+Any problems that comes up I will 
 
 ### Implementation
 
@@ -119,10 +134,13 @@ Changed splash sound on the red and yellow leaf since they sounded a bit harsh.
 ## Media
 <hr>
 
+* Sound effect taken from youtube [Link here.](https://www.youtube.com/watch?v=WS_3OCcKiJ0)
 
+* Cut and modified the sounds myself in the program Ableton live.
 
 * README template from code institute. [README.md template](https://github.com/Code-Institute-Solutions/readme-template).
 
+* Moving eyes taken from youtube [link here.](https://www.youtube.com/watch?v=AixAmLWzXYg)
 ## Acknowledgements
 <hr>
 

@@ -10,6 +10,10 @@
     let colors = [];
     let on = false;
     let noise = true;
+    
+    let righteye = document.getElementsByClassName("rightiris");
+    let lefteye = document.getElementsByClassName("leftiris");
+    let balls = document.querySelector(".ball")
 
     const scoreCounter = document.querySelector(".score");
     const topRight = document.querySelector(".top-right");
@@ -22,6 +26,20 @@
     const onButton = document.querySelector('#on');
     const ambianceButton = document.querySelector("#ambiance-on-off");
 
+    /* Frog eyes mousemovement */ 
+    document.onmousemove = function () {
+        let x = event.clientX * 100 / window.innerWidth + "%";
+        let y = event.clientY * 100 / window.innerHeight + "%";
+
+        for(let i = 0; i < 2; i++) {
+            lefteye[i].style.left = x;
+            lefteye[i].style.top = y;
+
+            righteye[i].style.left = x;
+            righteye[i].style.top = y;
+        }
+    }
+
 ambianceButton.addEventListener('click', () => {
     if (ambianceButton.checked == true) {
     let ambiance = document.getElementById("ambiance");
@@ -30,7 +48,6 @@ ambianceButton.addEventListener('click', () => {
     if (ambianceButton.checked == false) {
         ambiance.pause();
     }
-    
 });
 
 onButton.addEventListener('click', () => {
@@ -56,7 +73,7 @@ function play () {
   score = 1;
   scoreCounter.innerHTML = 1;
   good = true;
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 3; i++) {
   order.push(Math.floor(Math.random() * 6) + 1);
   }
   compTurn = true;

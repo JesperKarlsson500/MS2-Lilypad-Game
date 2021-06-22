@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <title>Simon Game</title>
     <!--Sound effects-->
     <audio loop id="ambiance">
@@ -31,9 +34,8 @@
 <body>
   <div class="frame">
     <input type="checkbox" id="ambiance-on-off">test</input>
-    <span class="game-name"><b>Lilypad</b></span>
-    
     <div class="container">
+      <input type="checkbox" class="toggle" id="on"></input>
       <!--Lili pads-->
       <span class="top-right"></span>
       <span class="right"></span>
@@ -55,13 +57,20 @@
           <span class="right-foot"></span>
           <span class="left-foot"></span>
             <div class="frog">
-              <span class="righteye"></span>
-              <span class="rightiris"></span>
-              <span class="lefteye"></span>
-              <span class="leftiris"></span>
+              <div class="righteye">
+                <div class="rightiris"></div>
+              </div>
+              <div class="lefteye">
+                  <div class="leftiris"></div>
+              </div>
               <span class="mouth"></span>
               <span class="mouthcover"></span>
             </div>
+        </div>
+        <!-- Text bubble -->
+        <div class="talk-arrow"></div>
+        <div class="talkbubble">
+            <div class="welcome-text">Welcome to<br>my Lilypad<br>game</div>
         </div>
       
         <span class="inner-circle">

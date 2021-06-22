@@ -65,7 +65,9 @@ I want the user to be happy in a relaxed learning inviroment
 
 ## Structure
 The game is made up of one page. 
-
+It consists of six lilypads that light up in a randomized pattern. Every turn 
+you complete the pattern increases by one until you reach the score of 15. 
+At 15 you won the game.
 
 ## Wireframes
 <hr>

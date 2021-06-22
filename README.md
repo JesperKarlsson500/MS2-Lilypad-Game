@@ -1,11 +1,11 @@
-# Lilypad
+# Lilypad Game
 
-This project is created to help kids have fun and improve their memory. 
-With a cute design, simple layout and easy to use.
+This project is created to help anyone improve their memory while having a fun time.
+With a cute and simple design and an easy to use layout.
 
 ## Showcase
 
-
+A deployed version of my game can be found [here.](https://jesperkarlsson500.github.io/ Fill this part in)
 ## Navigation
 
 * [UX](#ux)
@@ -32,28 +32,40 @@ With a cute design, simple layout and easy to use.
 
 ## UX
 <hr>
+The purpose of this game is to help anyone improve their memory while having a fun time. 
+Put on the ambiant music in the game, sit back, relax and follow the frog from lily to lily. 
+To help you remember what lilypad to jumped to, they are colored differently and have a unique splash sound
+to them when you click them. 
+
 
 ### UX Stories
+
+* As a user I want to have fun.
+* As a user I want to follow patterns and improve my memory.
+* As a user I want to learn in a relaxed and colorful inviroment
+* As a user I want to easily pick up how the game works
+* As a user I want to see how good my memory is.
+
+A user for my Lilypad game is looking to improve their memory and have fun doing it.
 
 ## Strategy
 <hr>
 
 #### User Needs
-
+Be fun, user friendly with clear navigation and flow through the whole experience.
 
 #### Business vision
+As a business I see the market being saturated with memory games. 
+This doesn't mean it's a no go. There are possibilites with my frog themed Simon inspired game
+but I would have to test it extensivly together with kids to see their reactions 
+and if it's something they want.
 
 ## Scope
+I want the user to be happy in a relaxed learning inviroment
 
 ## Structure
+The game is made up of one page. 
 
-#### Home
-
-#### Tutorial
-
-#### Playground
-
-#### Signup
 
 ## Wireframes
 <hr>
@@ -65,8 +77,9 @@ With a cute design, simple layout and easy to use.
 
 ## Features
 <hr>
-
-### Future Features
+Start game button
+Ambiant music on/off button.
+Score counter
 
 ## Technologies
 <hr>
@@ -102,6 +115,8 @@ This project was build using the following technologies:
 
 ## Media
 <hr>
+
+
 
 * README template from code institute. [README.md template](https://github.com/Code-Institute-Solutions/readme-template).
 

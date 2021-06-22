@@ -1,45 +1,113 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Lilypad
 
-Welcome JesperKarlsson500,
+This project is created to help kids have fun and improve their memory. 
+With a cute design, simple layout and easy to use.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## Showcase
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Navigation
 
-`python3 -m http.server`
+* [UX](#ux)
+* [Strategy](#strategy)
+    + [User-needs](#user-needs)
+    + [Business-vision](#business-vision)
+* [Scope](#scope)
+* [Structure](#structure)
+* [Wireframes](#wireframes)
+  + [Changes](#changes-to-wireframes)
+* [Features](#features)
+    + [Existing-features](#existing-features)
+    + [Future-features](#futere-features)
+* [Technologies](#technologies)
+* [Testing](#testing)
++ [Testing-plan](#testing-plan)
+  + [Implementation](#implementation)
+  + [Results](#results)
+* [Bugs](#bugs)
+* [Deployment](#deployment)
+* [Credits](#credits)
+* [Media](#media)
+* [Acknowledgements](#acknowledgements)
 
-A blue button should appear to click: *Make Public*,
+## UX
+<hr>
 
-Another blue button should appear to click: *Open Browser*.
+### UX Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Strategy
+<hr>
 
-A blue button should appear to click: *Make Public*,
+#### User Needs
 
-Another blue button should appear to click: *Open Browser*.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### Business vision
 
-## Updates Since The Instructional Video
+## Scope
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Structure
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### Home
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### Tutorial
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Playground
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### Signup
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Wireframes
+<hr>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Changes to wireframes
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Original ideas
+<hr>
 
---------
+## Features
+<hr>
 
-Happy coding!
+### Future Features
+
+## Technologies
+<hr>
+This project was build using the following technologies:
+
+* HTML5
+* CSS3
+* Google Chrome DevTools: Helped me iterate, debug and profile my site.
+* Lighthouse: Helped me improve the websites performance on both desktop and mobile.
+* Jigsaw W3C validator: Validated and tested my CSS.
+* W3C Markup validator: Validated and tested my HTML.
+
+## Testing
+<hr>
+
+### Testing plan
+
+### Implementation
+
+#### When using code validator I found:
+
+## Results
+<hr>
+
+## Bugs
+<hr>
+
+## Deployment
+<hr>
+
+## Credit
+<hr>
+
+## Media
+<hr>
+
+* README template from code institute. [README.md template](https://github.com/Code-Institute-Solutions/readme-template).
+
+## Acknowledgements
+<hr>
+
+**This project was created for educational purposes only, credit for all images goes to their owners**
+
+**Created by Jesper Karlsson**

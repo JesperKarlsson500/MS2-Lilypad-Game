@@ -32,6 +32,8 @@
       transform: translate(-50%,-50%);
       position: absolute;
   }
+
+  /* Frog */
   .right-foot {
       height: 20px;
       width: 30px;
@@ -144,7 +146,7 @@
       transform: rotate(0deg);
       border: solid 4px darkgreen;
   }
-
+  /* Game Container */
   .container {
       height: 400px;
       width: 400px;
@@ -221,7 +223,7 @@
       border-radius: 100%;
   }
 
-  /* Lili flower */
+  /* Lily flowers */
   .inner-circle {
       height: 140px;
       width: 140px;
@@ -232,7 +234,7 @@
       background-color: var(--oceanblue);
       border-radius: 50%;    
   }
-    /* The cut into the leafs */
+    /* The cut into the Lilyleafs */
     .cutleaf {
       height: 40px;
       width: 40px;
@@ -304,6 +306,7 @@
       border-radius: 80% 0;
       transform: rotate(198deg);
     }
+
     /* white and pink flower leafs */
     .flowerleaftop {
       height: 50px;
@@ -424,16 +427,17 @@
   }
 
   .score {
-      top: 30%;
       color: var(--red);
       text-align: center;
       font-size: 2em;
       font-weight: bold;
+      margin-top: 20%;
+      
   }
 
   .game-name {
       position: absolute;
-      top: 15%;
+      top: 5%;
       left: 50%;
       transform: translate(-50%,-50%);
       font-size: 2em;

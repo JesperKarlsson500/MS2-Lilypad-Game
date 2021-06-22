@@ -35,26 +35,26 @@
   .right-foot {
       height: 20px;
       width: 30px;
-      top: -5%;
-      left: 53%;
+      top: -10%;
+      left: 56%;
       transform: translate(-50%,-50%);
       position: absolute;
       background-color: darkgreen;
       border-radius: 90% 0;
-      transform: rotate(0deg);
+      transform: rotate(-50deg);
       border: solid 4px green;
   }
 
   .left-foot {
       height: 20px;
-      width: 20px;
-      top: -5%;
-      left: 37%;
+      width: 30px;
+      top: -12%;
+      left: 31%;
       transform: translate(-50%,-50%);
       position: absolute;
       background-color: darkgreen;
       border-radius: 90% 0;
-      transform: rotate(90deg);
+      transform: rotate(125deg);
       border: solid 4px green;
   }
   

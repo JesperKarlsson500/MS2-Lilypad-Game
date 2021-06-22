@@ -94,6 +94,7 @@ This project was build using the following technologies:
 
 ## Testing
 <hr>
+Changed splash sound on the red and yellow leaf since they sounded a bit harsh.
 
 ### Testing plan
 

@@ -51,7 +51,8 @@ ambianceButton.addEventListener('click', () => {
         ambiance.pause();
     }
 });
- 
+
+
 onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
         on = true;

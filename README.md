@@ -63,12 +63,13 @@ A user for my Lilypad game is looking to improve their memory and have fun doing
 <hr>
 
 #### User Needs
-Be fun, user friendly with clear navigation and flow through the whole experience.
+Be fun, user friendly and challanging throughout the whole experience.
+An easy to see favicon so you can find the game in all your tabs. we're all guilty of that.
 
 #### Business vision
 As a business I see the market being saturated with memory games. 
 This doesn't mean it's a no go. There are possibilites with my frog themed Simon inspired game
-but I would have to test it extensivly together with kids to see their reactions 
+but I would have to test it extensivly together targeted audiance to see their reactions 
 and if it's something they want.
 
 ## Scope
@@ -112,6 +113,7 @@ This project was build using the following technologies:
 * Lighthouse: Helped me improve the websites performance on both desktop and mobile.
 * Jigsaw W3C validator: Validated and tested my CSS.
 * W3C Markup validator: Validated and tested my HTML.
+* Used [this.](https://favicon.io/favicon-generator/) to create my favicon.
 
 ## Testing
 <hr>

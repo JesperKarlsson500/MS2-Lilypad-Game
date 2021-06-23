@@ -179,6 +179,8 @@ The speed of the whole game changes and a restart is needed to solve the problem
 
 * README template from code institute. [README.md template](https://github.com/Code-Institute-Solutions/readme-template).
 
+* Custom favicon created at [favicon.io.](https://favicon.io/favicon-generator/)
+
 ## Acknowledgements
 <hr>
 

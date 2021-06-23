@@ -13,8 +13,9 @@ to the next. After a completed level, another random lily pad will be added and 
 Now the user needs to remember and follow the old patterns and the new to complete the level. 
 In the game there are 15 levels, If the user successfully completes all 15 levels they win the game.
 
-
 ## Showcase
+
+![Showcase-screenshot](assets/img/Lilypadgamepicture.jpg)
 
 A deployed version of my game can be found [here.](https://jesperkarlsson500.github.io/ Fill this part in)
 ## Navigation
@@ -68,8 +69,8 @@ An easy to see favicon so you can find the game in all your tabs. we're all guil
 
 #### Business vision
 As a business I see the market being saturated with memory games. 
-This doesn't mean it's a no go. There are possibilites with my frog themed Simon inspired game
-but I would have to test it extensivly together targeted audiance to see their reactions 
+This doesn't mean it's a no go. There are possibilites with my frog themed Simon inspired game.
+I need to test it with the targeted audiance, to see their reactions
 and if it's something they want.
 
 ## Scope
@@ -86,11 +87,24 @@ At 15 you won the game.
 
 I started making the game to look like the Simon game
 
-I later on changed the look and and layout of the game to be more unique.
+![Wireframe](assets/img/Simonwireframe.png)
+
+I later on changed the look and and layout to be more unique.
+
+![Wireframe](assets/img/LilyPadWireframe.jpg)
 ### Changes to wireframes
+
+
 
 ## Original ideas
 <hr>
+
+Originally I was planning to make a Simon game. I wanted to learn how to do it and create a fun game. 
+But the more I worked on it the more it fell flat. I know it's just a simon game but still... 
+I wanted to upgrade it a little. One day I was walking over a bridge and saw a bunch of beautiful lily pads in the water.
+At that moment I knew I wanted to change the look to have the user jump from lily pad to lily pad.
+This would be more pleasing to look at and also make the game more sellable
+
 
 ## Features
 <hr>

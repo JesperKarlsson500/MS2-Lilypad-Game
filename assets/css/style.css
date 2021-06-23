@@ -478,7 +478,7 @@
   .score {
       color: var(--red);
       text-align: center;
-      font-size: 1.5em;
+      font-size: 1.6em;
       font-weight: bold;
   }
 
@@ -492,10 +492,7 @@
 
   #on {
       background-color: var(--red);
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      transform: translate(-50%,-50%);
+      position: relative;
       font-size: 1.5em;
   }
 

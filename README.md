@@ -149,6 +149,8 @@ Any problems that comes up I will
 
 * Moving eye effect taken from youtube [link here.](https://www.youtube.com/watch?v=AixAmLWzXYg)
 
+* Yaykids sound effect taken from youtube [link here.](https://www.youtube.com/watch?v=_Z3ra0CxCE0)
+
 * Cut and modified the sounds myself in the program Ableton live.
 
 * README template from code institute. [README.md template](https://github.com/Code-Institute-Solutions/readme-template).

@@ -13,8 +13,8 @@
     
     let righteye = document.getElementsByClassName("rightiris");
     let lefteye = document.getElementsByClassName("leftiris");
-    let balls = document.querySelector(".ball")
 
+    const talkBubble = document.querySelector(".textbubble");
     const scoreCounter = document.querySelector(".score");
     const topRight = document.querySelector(".top-right");
     const right = document.querySelector(".right");
@@ -26,7 +26,7 @@
     const onButton = document.querySelector('#on');
     const ambianceButton = document.querySelector("#ambiance-on-off");
 
-    /* Frog eyes mousemovement */ 
+    /* Frogeye mousemovements */ 
     document.onmousemove = function () {
         let x = event.clientX * 100 / window.innerWidth + "%";
         let y = event.clientY * 100 / window.innerHeight + "%";
@@ -54,11 +54,13 @@ onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
         on = true;
         win = true;
+        talkBubble.innerHTML = "Click on the <br>lilypad and jump<br> after me!";
         play();
     } 
     if (onButton.checked == false) {
         on = false;
         scoreCounter.innerHTML = "";
+        talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
         clearColors();
         clearInterval(intervalId);
     }
@@ -260,13 +262,13 @@ function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1]) 
     good = false;
 
-  if (playerOrder.length == 15 && good) {
+  if (playerOrder.length == 2 && good) {
     winGame();
   }
 
   if (good == false) {
     flashColor();
-    scoreCounter.innerHTML = "OPS!"
+    scoreCounter.innerHTML = "OPS!";
     setTimeout(() => {
       scoreCounter.innerHTML = score;
       clearColors();
@@ -287,102 +289,25 @@ function check() {
 
 function winGame() {
     flashColor();
-    setTimeout(() => {
-      clearColors();
-    }, 200);
-    flashColor();
-    scoreCounter.innerHTML = "WIN!"
+    talkBubble.innerHTML = "WOW!";
+    scoreCounter.innerHTML = "WIN!";
     on = false;
     win = true;
-}
-
-// StartButton
-/*startButton.addEventListener('click', () => {
-    if (on || win) {
-        play();
-    }
-});
-
-function play () {
-    win = false;
-    order = [];
-    playOrder = [];
-    flash = [];
-    intervalId = 0;
-    score = 1;
-    scoreCounter.innerHTML = 1;
-    good = true;
-    for (let i = 0; i < 15; i++) {
-        order.push(Math.floor(Math.random() * 4) + 1);
-    }
-    compTurn = true;
-    // setinterval repeats the interval untill its over
-    intervalId = setInterval(gameTurn, 800);
-}
-
-function gameTurn() {
-    on = false;
-    if (flash == turn) {
-        clearInterval(intervalId);
-        compTurn = false;
+    setTimeout(() => {
+        clearColors()
+    }, 500);
+    /*
+    setTimeout(() => {
+        flashColor();
+    }, 1000);
+    setTimeout(() => {
         clearColors();
-        on = true;
-    }
-    if (compTurn) {
-        clearColor();
-        //
-        setTimeout(() => {
-            //if the first item in the array is one
-            if (order[flash] == 1) one();
-            if (order[flash] == 2) two();
-            if (order[flash] == 3) three();
-            if (order[flash] == 4) four();
-            flash++;
-        }, 200);
-    }
+    }, 1500);
+    setTimeout(() => {
+        flashColor();
+    }, 2000);
+    setTimeout(() => {
+        clearColors();
+        talkBubble.innerHTML = "You're a big <br> frog now!";
+    }, 2500);*/
 }
-
-function one() {
-    if (noise) {
-        let audio = get.documentById("clip1");
-        audio.play();
-    }
-    noise = true;
-    topLeft.style.backgroundColor = (--flashgreen);
-}
-
-function clearColor() {
-    topLeft.style.backgroundColor = (--green);
-}
-
-//$(document).ready(function(){
-  //$(".toggle").click(function(){
-    //$(this).toggleClass("opacity"); 
-  //});
-//});
-
-
-// start button will glow when the power button is green
-
-
-    // Starts the game and the computer will blink one random color
-    // function StartGame () {
-        // if ()
-
-            
-
-
-        // clicking start will couse blue to get 50% opacity after 500ms
-        //document.getElementById('start').addEventListener('click', StartGame);
-    //}
-
-    // test code
-    //setTimeout(() => {  }, 2000);
-    //after this blue will flash for 500ms
-
-
-
-    // creating a for loop to push 15 randoms number between 1 and 4 to the console
-
-    //let currentTry = 1;
-    */

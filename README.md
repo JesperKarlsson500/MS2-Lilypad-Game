@@ -136,11 +136,12 @@ Any problems that comes up I will
 
 * Sound effect taken from youtube [Link here.](https://www.youtube.com/watch?v=WS_3OCcKiJ0)
 
+* Moving eye effect taken from youtube [link here.](https://www.youtube.com/watch?v=AixAmLWzXYg)
+
 * Cut and modified the sounds myself in the program Ableton live.
 
 * README template from code institute. [README.md template](https://github.com/Code-Institute-Solutions/readme-template).
 
-* Moving eyes taken from youtube [link here.](https://www.youtube.com/watch?v=AixAmLWzXYg)
 ## Acknowledgements
 <hr>
 

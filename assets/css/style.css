@@ -167,9 +167,9 @@
       border: solid 4px lightgreen;
   }
 
-  .talkbubble {
+  .bubble {
       height: 80px;
-      width: 150px;
+      width: 160px;
       top: -20%;
       left: 11%;
       color: black;
@@ -179,7 +179,7 @@
       border: solid 2px green;   
   }
 
-  .welcome-text {
+  .textbubble {
       margin-top: 10%;
       text-align: center;
       

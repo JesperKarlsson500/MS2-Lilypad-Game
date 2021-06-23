@@ -137,6 +137,10 @@ The game doesn't reset when the win condition is met, So I need to fix that.
 
 I found so far that if you win the game nothing happens. I will look into this.
 
+The game's score counter only went up to four. I typed in console.log(order); 
+to find out that the for loop only looped three times. 
+In the for loop I had type in i < 3, so I changed it back to i < 15 as it should be.
+
 ### Testing plan
 
 My testing plan is to play the game and make sure it works on desktop.
@@ -155,8 +159,6 @@ Any problems that comes up I will
 Sometimes If I click the lilys very fast the game bugs and start acting real strange. 
 Lilys that are no supposed to be flashed start flashing. 
 The speed of the whole game changes and a restart is needed to solve the problem.
-
-Sometimes the game only goes up to the count of four but it doesn't show the forth flash.
 
 ## Deployment
 <hr>

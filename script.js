@@ -78,9 +78,10 @@ function play() {
   score = 1;
   scoreCounter.innerHTML = 1;
   good = true;
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 15; i++) {
   order.push(Math.floor(Math.random() * 6) + 1);
-  }
+    console.log(order);
+}
   compTurn = true;
 
   intervalId = setInterval(gameTurn, 1000);
@@ -311,7 +312,7 @@ function check() {
     compTurn = true;
     flash =  0; 
     scoreCounter.innerHTML = score;
-    intervalId = setInterval(gameTurn, 1000);
+    intervalId = setInterval(gameTurn, 800);
   }
 }
 
@@ -319,7 +320,7 @@ function winGame() {
     clearColors();
     let yaaykids = document.getElementById("yaykids");
     yaaykids.play();
-    talkBubble.innerHTML = "WOW!";
+    talkBubble.innerHTML = "RABBIT!<br>WOOOW!";
     scoreCounter.innerHTML = "WIN!";
     on = false;
     win = true;

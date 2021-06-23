@@ -11,9 +11,9 @@
     let on = false;
     let noise = true;
     
-    let righteye = document.getElementsByClassName("rightiris");
-    let lefteye = document.getElementsByClassName("leftiris");
-
+    const startGame = document.getElementsByClassName("bubble");
+    const righteye = document.getElementsByClassName("rightiris");
+    const lefteye = document.getElementsByClassName("leftiris");
     const talkBubble = document.querySelector(".textbubble");
     const scoreCounter = document.querySelector(".score");
     const topRight = document.querySelector(".top-right");
@@ -50,7 +50,54 @@ ambianceButton.addEventListener('click', () => {
     }
 });
 
-onButton.addEventListener('click', () => {
+/*$(document).ready(function(){
+
+$(".startGame").on("click", function() {
+    if $(this.click == true) {
+        on = true;
+    win = true;
+    talkBubble.innerHTML = "Click on the <br>lilypad and jump<br> after me!";
+    play();
+    }
+    if $(this.click == false) {
+      on = false;
+        scoreCounter.innerHTML = "";
+        talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
+        setTimeout(() => {
+        talkBubble.innerHTML = "Click here<br>to begin!";
+        }, 7000);
+        clearColors();
+        clearInterval(intervalId);  
+    }
+  });
+});
+*/
+let startGameIsClicked = false;
+
+function clickHandler(){
+  startGameIsClicked = true;
+}
+
+startGame.addEventListener('click', () => {
+    if (startGame.clicked == true) {
+        on = true;
+        win = true;
+        talkBubble.innerHTML = "Click on the <br>lilypad and jump<br> after me!";
+        play();
+    } 
+    if (onButton.checked == false) {
+        on = false;
+        scoreCounter.innerHTML = "";
+        talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
+        setTimeout(() => {
+        talkBubble.innerHTML = "Click here<br>to begin!";
+        }, 7000);
+        clearColors();
+        clearInterval(intervalId);
+    }
+});
+
+/* onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
         on = true;
         win = true;
@@ -61,11 +108,14 @@ onButton.addEventListener('click', () => {
         on = false;
         scoreCounter.innerHTML = "";
         talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
+        setTimeout(() => {
+        talkBubble.innerHTML = "Click here<br>to begin!";
+        }, 7000);
         clearColors();
         clearInterval(intervalId);
     }
 });
-
+*/
 function play () {
   win = false;
   order = [];
@@ -163,7 +213,7 @@ function six() {
 
 function clearColors() {
     topRight.style.backgroundColor = "var(--red)";
-    right.style.backgroundColor = "var(--darkgreen)";
+    right.style.backgroundColor = "var(--forestgreen)";
     bottomRight.style.backgroundColor = "var(--blue)";
     bottomLeft.style.backgroundColor = "var(--yellow)";
     left.style.backgroundColor = "var(--purple)";
@@ -177,6 +227,30 @@ function flashColor() {
     bottomLeft.style.backgroundColor = "var(--flashyellow)";
     left.style.backgroundColor = "var(--flashpurple)";
     topLeft.style.backgroundColor = "var(--flashgreen)";
+}
+
+function flashred() {
+    topRight.style.backgroundColor = "var(--flashred)";
+}
+
+function flashforestgreen() {
+    right.style.backgroundColor = "var(--flashforestgreen)";
+}
+
+function flashblue() {
+    bottomRight.style.backgroundColor = "var(--flashblue)";
+}
+
+function flashyellow() {
+    bottomLeft.style.backgroundColor = "var(--flashyellow)";
+}
+
+function flashpurple() {
+    left.style.backgroundColor = "var(--flashpurple)";
+}
+
+function flashgreen() {
+    topLeft.style.backgroundColor = "var(--flashforestgreen)";
 }
 
 
@@ -272,6 +346,7 @@ function check() {
     setTimeout(() => {
       scoreCounter.innerHTML = score;
       clearColors();
+      play();
     }, 600);
     
     noise = false;
@@ -288,26 +363,52 @@ function check() {
 }
 
 function winGame() {
-    flashColor();
+    setTimeout(() => {
+        clearColors();
+    }, 100);
     talkBubble.innerHTML = "WOW!";
     scoreCounter.innerHTML = "WIN!";
     on = false;
     win = true;
     setTimeout(() => {
-        clearColors()
+        flashred();
     }, 500);
-    /*
     setTimeout(() => {
-        flashColor();
+        flashforestgreen();
     }, 1000);
     setTimeout(() => {
-        clearColors();
+        flashblue();
     }, 1500);
     setTimeout(() => {
-        flashColor();
+        flashyellow();
     }, 2000);
     setTimeout(() => {
-        clearColors();
-        talkBubble.innerHTML = "You're a big <br> frog now!";
-    }, 2500);*/
+        flashpurple();
+    }, 2500);
+    setTimeout(() => {
+        flashgreen();
+    }, 3000);
+    setTimeout(() => {
+        clearColors()
+        talkBubble.innerHTML = "Let's play again!";
+    }, 3500);
+    setTimeout(() => {
+        flashColor()
+    }, 4000);
+    setTimeout(() => {
+        clearColors()
+    }, 4500);
+    setTimeout(() => {
+        flashColor()
+    }, 5000);
+    setTimeout(() => {
+        clearColors()
+    }, 5500);
+    setTimeout(() => {
+        flashColor()
+    }, 6000);
+    setTimeout(() => {
+        clearColors()
+        talkBubble.innerHTML = "Click start<br>to begin!";
+    }, 6500);
 }

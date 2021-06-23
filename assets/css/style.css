@@ -5,7 +5,7 @@
     --purple: #7b00a1;
     --yellow: #bcba00;
     --dark-red: #570000;
-    --darkgreen: #25541f;
+    --forestgreen: #25541f;
     --flashred: #ff9672;
     --flashblue: #9fafff;
     --flashgreen: #a3ff99;
@@ -36,7 +36,7 @@
       position: absolute;
   }
 
-  /* Frog */
+                                          /* Frog */
   .right-foot {
       height: 20px;
       width: 30px;
@@ -153,7 +153,7 @@
       border: solid 4px darkgreen;
   }
 
-  /* Talk bubble */
+                                        /* Talk bubble */
   .talk-arrow {
       height: 40px;
       width: 40px;
@@ -176,13 +176,16 @@
       position: absolute;
       background-color: lightgreen;
       border-radius: 50%;
-      border: solid 2px green;   
+      border: solid 2px green;  
+      display: flex;
+      align-items: center;
+      justify-content: center; 
   }
 
   .textbubble {
-      margin-top: 10%;
       text-align: center;
-      
+      font-size: 110%;
+      font-weight: bold;
   }
 
   /* Game Container */
@@ -262,7 +265,7 @@
       border-radius: 100%;
   }
 
-  /* Lily flowers */
+                                        /* Lily flowers */
   .inner-circle {
       height: 140px;
       width: 140px;
@@ -273,7 +276,7 @@
       background-color: var(--oceanblue);
       border-radius: 50%;    
   }
-    /* The cut into the Lilyleafs */
+                                        /* The cut into the Lilyleafs */
     .cutleaf {
       height: 40px;
       width: 40px;
@@ -346,7 +349,7 @@
       transform: rotate(198deg);
     }
 
-    /* white and pink flower leafs */
+                                        /* white and pink flower leafs */
     .flowerleaftop {
       height: 50px;
       width: 50px;
@@ -451,7 +454,7 @@
       border: 5px solid pink;
     }
 
-    /* Score Counter */
+                                        /* Score Counter */
   .counter {
       position: absolute;
       top: 50%;
@@ -463,13 +466,15 @@
       background-color: var(--yellow);
       border-radius: 100%;
       border: 5px solid rgb(247, 255, 141);
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 
   .score {
       color: var(--red);
       text-align: center;
-      margin-top: 15%;
-      font-size: 2em;
+      font-size: 1.5em;
       font-weight: bold;
   }
 

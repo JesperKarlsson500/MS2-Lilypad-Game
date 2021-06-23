@@ -9,33 +9,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <title>Simon Game</title>
     <!--Sound effects-->
+    <audio id="yaykids">
+        <source src="assets/audio/yaykids.mp3" type="audio/mpeg"></source>
+    </audio>
     <audio loop id="ambiance">
         <source src="assets/audio/Ambience.mp3" type="audio/mpeg"></source>
     </audio>
     <audio id="clip1">
-  	    <source src="assets/audio/Splash1.mp3"></source>
+  	    <source src="assets/audio/Splash1.mp3" type="audio/mpeg"></source>
     </audio>
     <audio id="clip2">
-        <source src="assets/audio/Splash2.mp3"></source>
+        <source src="assets/audio/Splash2.mp3" type="audio/mpeg"></source>
     </audio>
     <audio id="clip3">
-        <source src="assets/audio/Splash3.mp3"></source>
+        <source src="assets/audio/Splash3.mp3" type="audio/mpeg"></source>
     </audio>
     <audio id="clip4">
-        <source src="assets/audio/Splash4.mp3"></source>
+        <source src="assets/audio/Splash4.mp3" type="audio/mpeg"></source>
     </audio>
     <audio id="clip5">
-        <source src="assets/audio/Splash5.mp3"></source>
+        <source src="assets/audio/Splash5.mp3" type="audio/mpeg"></source>
     </audio>
     <audio id="clip6">
-        <source src="assets/audio/Splash6.mp3"></source>
+        <source src="assets/audio/Splash6.mp3" type="audio/mpeg"></source>
     </audio>
 </head>
 <body>
   <div class="frame">
-    <input type="checkbox" id="ambiance-on-off">test</input>
+    <input type="checkbox" id="ambiance-on-off" style="margin-left: 50%;">Music</input>
     <div class="container">
-      <input type="checkbox" id="on"></input>
+      <input type="checkbox" id="on" style="margin-left: 50%;">Start</input>
       <!--Lili pads-->
       <span class="top-right"></span>
       <span class="right"></span>
@@ -69,9 +72,10 @@
         </div>
         <!-- Text bubble -->
         <div class="talk-arrow"></div>
-        <button class="bubble">
-            <div class="textbubble">Welcome to<br>my Lily Pad<br>game!</div>
-        </button>
+        <div class="bubble">
+            <div class="textbubble startGame">Welcome to <br>my Lily Pad<br>game!</div>
+            
+        </div>
         <span class="inner-circle">
           <!--Lili flower-->
           <span class="flowerleaftop"></span>

@@ -12,19 +12,21 @@
     let noise = true;
     
     const startGame = document.getElementsByClassName("bubble");
+
+    const talkBubble = document.querySelector(".textbubble");
+
     const righteye = document.getElementsByClassName("rightiris");
     const lefteye = document.getElementsByClassName("leftiris");
-    const talkBubble = document.querySelector(".textbubble");
-    const scoreCounter = document.querySelector(".score");
+    
     const topRight = document.querySelector(".top-right");
     const right = document.querySelector(".right");
     const bottomRight = document.querySelector(".bottom-right");
     const bottomLeft = document.querySelector(".bottom-left");
     const left = document.querySelector(".left");
     const topLeft = document.querySelector(".top-left");
-    const startButton = document.querySelector("#start");
     const onButton = document.querySelector('#on');
     const ambianceButton = document.querySelector("#ambiance-on-off");
+    const scoreCounter = document.querySelector(".score");
 
     /* Frogeye mousemovements */ 
     document.onmousemove = function () {
@@ -50,17 +52,37 @@ ambianceButton.addEventListener('click', () => {
     }
 });
 
-/*$(document).ready(function(){
+/*
+startGame.addEventListener('click', () => {
+    if(onclick.startGame == true) {
+       on = true;
+    win = true;
+    talkBubble.innerHTML = "Click on the <br>lily pad and jump<br> after me!";
+    play(); 
+    }
+    if (onclick.startGame == false) {
+        on = false;
+        scoreCounter.innerHTML = "";
+        talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
+        setTimeout(() => {
+        talkBubble.innerHTML = "Click here<br>to begin!";
+        }, 7000);
+        clearColors();
+        clearInterval(intervalId);
+    }
+});
+*/
+$(document).ready(function(){
 
-$(".startGame").on("click", function() {
-    if $(this.click == true) {
-        on = true;
+$(startGame).on("click", function() {
+    if (startGame == "click") {
+    on = true;
     win = true;
     talkBubble.innerHTML = "Click on the <br>lilypad and jump<br> after me!";
     play();
     }
-    if $(this.click == false) {
-      on = false;
+    if (startGame == false) {
+        on = false;
         scoreCounter.innerHTML = "";
         talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
         setTimeout(() => {
@@ -71,27 +93,26 @@ $(".startGame").on("click", function() {
     }
   });
 });
-*/
-let startGameIsClicked = false;
 
-function clickHandler(){
-  startGameIsClicked = true;
-}
+/* Onload 5sec delay on text */
 
-startGame.addEventListener('click', () => {
-    if (startGame.clicked == true) {
+
+window.onload = setTimeout(() => {
+    talkBubble.innerHTML = "Click here<br>to begin!";
+    }, 5000);
+        
+
+onButton.addEventListener('click', () => {
+    if (onButton.checked == true) {
         on = true;
         win = true;
-        talkBubble.innerHTML = "Click on the <br>lilypad and jump<br> after me!";
+        talkBubble.innerHTML = "Click on the <br>lily pad and jump<br> after me!";
         play();
     } 
     if (onButton.checked == false) {
         on = false;
         scoreCounter.innerHTML = "";
-        talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
-        setTimeout(() => {
-        talkBubble.innerHTML = "Click here<br>to begin!";
-        }, 7000);
+        talkBubble.innerHTML = "Welcome to<br>my Lily pad<br>game";
         clearColors();
         clearInterval(intervalId);
     }
@@ -363,52 +384,52 @@ function check() {
 }
 
 function winGame() {
-    setTimeout(() => {
-        clearColors();
-    }, 100);
+    clearColors();
+    let yaaykids = document.getElementById("yaykids");
+    yaaykids.play();
     talkBubble.innerHTML = "WOW!";
     scoreCounter.innerHTML = "WIN!";
     on = false;
     win = true;
     setTimeout(() => {
         flashred();
-    }, 500);
+    }, 250);
     setTimeout(() => {
         flashforestgreen();
-    }, 1000);
+    }, 500);
     setTimeout(() => {
         flashblue();
-    }, 1500);
+    }, 750);
     setTimeout(() => {
         flashyellow();
-    }, 2000);
+    }, 1000);
     setTimeout(() => {
         flashpurple();
-    }, 2500);
+    }, 1250);
     setTimeout(() => {
         flashgreen();
-    }, 3000);
+    }, 1500);
     setTimeout(() => {
         clearColors()
         talkBubble.innerHTML = "Let's play again!";
+    }, 2000);
+    setTimeout(() => {
+        flashColor()
+    }, 2250);
+    setTimeout(() => {
+        clearColors()
+    }, 2500);
+    setTimeout(() => {
+        flashColor()
+    }, 2750);
+    setTimeout(() => {
+        clearColors()
+    }, 3000);
+    setTimeout(() => {
+        flashColor()
+    }, 3250);
+    setTimeout(() => {
+        clearColors()
+        play()
     }, 3500);
-    setTimeout(() => {
-        flashColor()
-    }, 4000);
-    setTimeout(() => {
-        clearColors()
-    }, 4500);
-    setTimeout(() => {
-        flashColor()
-    }, 5000);
-    setTimeout(() => {
-        clearColors()
-    }, 5500);
-    setTimeout(() => {
-        flashColor()
-    }, 6000);
-    setTimeout(() => {
-        clearColors()
-        talkBubble.innerHTML = "Click start<br>to begin!";
-    }, 6500);
 }

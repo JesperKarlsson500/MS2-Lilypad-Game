@@ -1,7 +1,18 @@
-# Lilypad Game
+# Lily Pad Game
 
 This project is created to help anyone improve their memory while having a fun time.
 With a cute and simple design and an easy to use layout.
+
+The Lilypad game challenges the user to remember patterns. In the game there are six colored 
+lily pads that light up in randomly generated patterns. The user will repeat the patterns 
+shown by pressing the lily pads in the same order. 
+
+When pressing the start button the game begins with one random lily pad lighting. If the 
+user clicks on the same lily pad as the computer, they have completed that level and moves 
+to the next. After a completed level, another random lily pad will be added and to the pattern. 
+Now the user needs to remember and follow the old patterns and the new to complete the level. 
+In the game there are 15 levels, If the user successfully completes all 15 levels they win the game.
+
 
 ## Showcase
 
@@ -32,10 +43,10 @@ A deployed version of my game can be found [here.](https://jesperkarlsson500.git
 
 ## UX
 <hr>
-The purpose of this game is to help anyone improve their memory while having a fun time. 
+The purpose of this game is to help anyone improve their memory while having a good time. 
 Put on the ambiant music in the game, sit back, relax and follow the frog from lily to lily. 
-To help you remember what lilypad to jumped to, they are colored differently and have a unique splash sound
-to them when you click them. 
+To help the user remember what lily pad to jumped to, they are all colored differently and have a unique splash sound
+when clicked.
 
 
 ### UX Stories

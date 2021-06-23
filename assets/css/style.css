@@ -26,15 +26,10 @@
   .frame {
       height: 100vh;
       width: 100vw;
-      background-color: var(--oceanblue);
-      overflow: hidden;
-  }
-
-  .on-off-music {
       display: flex;
-      align-content: center;
-      align-items: center;
-      margin-left: 50%;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: var(--oceanblue);
   }
 
                                           /* Frog */

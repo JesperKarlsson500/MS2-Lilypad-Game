@@ -136,6 +136,12 @@ Any problems that comes up I will
 ## Bugs
 <hr>
 
+Sometimes If I click the lilys very fast the game bugs and start acting real strange. 
+Lilys that are no supposed to be flashed start flashing. 
+The speed of the whole game changes and a restart is needed to solve the problem.
+
+Sometimes the game only goes up to the count of four but it doesn't show the forth flash.
+
 ## Deployment
 <hr>
 

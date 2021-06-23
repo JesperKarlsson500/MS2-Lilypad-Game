@@ -51,57 +51,7 @@ ambianceButton.addEventListener('click', () => {
         ambiance.pause();
     }
 });
-
-/*
-startGame.addEventListener('click', () => {
-    if(onclick.startGame == true) {
-       on = true;
-    win = true;
-    talkBubble.innerHTML = "Click on the <br>lily pad and jump<br> after me!";
-    play(); 
-    }
-    if (onclick.startGame == false) {
-        on = false;
-        scoreCounter.innerHTML = "";
-        talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
-        setTimeout(() => {
-        talkBubble.innerHTML = "Click here<br>to begin!";
-        }, 7000);
-        clearColors();
-        clearInterval(intervalId);
-    }
-});
-*/
-$(document).ready(function(){
-
-$(startGame).on("click", function() {
-    if (startGame == "click") {
-    on = true;
-    win = true;
-    talkBubble.innerHTML = "Click on the <br>lilypad and jump<br> after me!";
-    play();
-    }
-    if (startGame == false) {
-        on = false;
-        scoreCounter.innerHTML = "";
-        talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
-        setTimeout(() => {
-        talkBubble.innerHTML = "Click here<br>to begin!";
-        }, 7000);
-        clearColors();
-        clearInterval(intervalId);  
-    }
-  });
-});
-
-/* Onload 5sec delay on text */
-
-
-window.onload = setTimeout(() => {
-    talkBubble.innerHTML = "Click here<br>to begin!";
-    }, 5000);
-        
-
+ 
 onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
         on = true;
@@ -118,26 +68,7 @@ onButton.addEventListener('click', () => {
     }
 });
 
-/* onButton.addEventListener('click', () => {
-    if (onButton.checked == true) {
-        on = true;
-        win = true;
-        talkBubble.innerHTML = "Click on the <br>lilypad and jump<br> after me!";
-        play();
-    } 
-    if (onButton.checked == false) {
-        on = false;
-        scoreCounter.innerHTML = "";
-        talkBubble.innerHTML = "Welcome to<br>my Lilypad<br>game";
-        setTimeout(() => {
-        talkBubble.innerHTML = "Click here<br>to begin!";
-        }, 7000);
-        clearColors();
-        clearInterval(intervalId);
-    }
-});
-*/
-function play () {
+function play() {
   win = false;
   order = [];
   playerOrder = [];
@@ -357,7 +288,7 @@ function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1]) 
     good = false;
 
-  if (playerOrder.length == 2 && good) {
+  if (playerOrder.length == 10 && good) {
     winGame();
   }
 

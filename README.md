@@ -103,17 +103,17 @@ Originally I was planning to make a Simon game. I wanted to learn how to do it a
 But the more I worked on it the more it fell flat. I know it's just a simon game but still... 
 I wanted to upgrade it a little. One day I was walking over a bridge and saw a bunch of beautiful lily pads in the water.
 At that moment I knew I wanted to change the look to have the user jump from lily pad to lily pad.
-This would be more pleasing to look at and also make the game more sellable
+This would be more pleasing to look at and also make the game more fun and sellable.
 
 
 ## Features
 <hr>
 
-* Start game button.
-* on/off button for the ambiant music.
+* on/off game checkbox.
+* on/off checkbox for the ambiant music.
 * Score counter if the middle of the lilyflower that increments after each succesful turn.
-* after reaching 15 turns you win the game and "WIN!" will show up to replace the numbers
-* All lily pads will flash their colors if you win the game (currently not working)
+* after reaching and completing 15 turns you win the game and "WIN!" will show up to replace the numbers
+* All lily pads will flash their colors from red to green clockwise and then all flash 3 times if you win the game.
 * A frog that introduces you to the game and keeps it's eyes on every move that you make.
 * If you fail the frog encurages you to try again.
 
@@ -144,13 +144,12 @@ In the for loop I changed: i < 2; to i < 1; that removed the 'style' undefined e
 
 ### Testing plan
 
-My testing plan is to play the game and make sure it works on desktop.
-Any problems that comes up I will.
+My main plan is to play the game and make sure it works on desktop.
 
 ### Implementation
 
 I used Lighthouse to check the performance on both mobile and desktop and search for errors.
-I used W3C code validator for both CSS and HTML. I test all my link to check that they're working.
+I used W3C code validator for both CSS and HTML. I test all my functions and checkboxes to make sure they're working.
 I used JSHint to search through my Javascript code.
 
 #### When using code validator I found:

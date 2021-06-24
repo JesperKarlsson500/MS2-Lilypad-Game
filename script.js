@@ -45,7 +45,7 @@ ambianceButton.addEventListener('click', () => {
         ambiance.play();
     }
     if (ambianceButton.checked == false) {
-        ambiance.pause();
+        ambiance.stop();
     }
 });
 

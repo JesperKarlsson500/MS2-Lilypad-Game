@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <meta name="description" content="Lily pad memory game">
+	<meta name="keywords" content="Lily pad, Memory game, fun, cute">
     <link rel="shortcut icon" sizes="16x16" href="assets/img/favicon-16x16.png">
     <title>Simon Game</title>
 </head>
@@ -36,62 +35,63 @@
     <audio id="clip6">
         <source src="assets/audio/Splash6.mp3" type="audio/mpeg"></source>
     </audio>
-  <div class="frame">
-    <input type="checkbox" id="ambiance-on-off">Music</input>
-    <input type="checkbox" id="on">Start Game</input>
+    <!--Game frame-->
+    <div class="frame">
+        <input type="checkbox" id="ambiance-on-off">Music</input>
+        <input type="checkbox" id="on">Start Game</input>
     
-    <div class="container">
-      <!--Lili pads-->
-      <span class="top-right"></span>
-      <span class="right"></span>
-      <span class="bottom-right"></span>
-      <span class="top-left"></span>
-      <span class="left"></span>
-      <span class="bottom-left"></span>
-        
-        <!--Cut leaf-->
-        <span class="cutleaf"></span>
-        <span class="rightleafcut"></span>
-        <span class="bottomrightleafcut"></span>
-        <span class="bottomleftleafcut"></span>
-        <span class="leftleafcut"></span>
-        <span class="topleftleafcut"></span>
-        
-        <!--Frog-->
-        <div>
-          <span class="right-foot"></span>
-          <span class="left-foot"></span>
-            <div class="frog">
-              <div class="righteye">
-                <div class="rightiris"></div>
-              </div>
-              <div class="lefteye">
-                  <div class="leftiris"></div>
-              </div>
-              <span class="mouth"></span>
-              <span class="mouthcover"></span>
-            </div>
-        </div>
-        <!-- Text bubble -->
-        <div class="talk-arrow"></div>
-        <div class="bubble">
-            <div class="textbubble startGame">Welcome to <br>my Lily Pad<br>game!</div>
+        <div class="container">
+        <!--Lili pads-->
+        <span class="top-right"></span>
+        <span class="right"></span>
+        <span class="bottom-right"></span>
+        <span class="top-left"></span>
+        <span class="left"></span>
+        <span class="bottom-left"></span>
             
+            <!--Cut leaf-->
+            <span class="cutleaf"></span>
+            <span class="rightleafcut"></span>
+            <span class="bottomrightleafcut"></span>
+            <span class="bottomleftleafcut"></span>
+            <span class="leftleafcut"></span>
+            <span class="topleftleafcut"></span>
+            
+            <!--Frog-->
+            <div>
+            <span class="right-foot"></span>
+            <span class="left-foot"></span>
+                <div class="frog">
+                <div class="righteye">
+                    <div class="rightiris"></div>
+                </div>
+                <div class="lefteye">
+                    <div class="leftiris"></div>
+                </div>
+                <span class="mouth"></span>
+                <span class="mouthcover"></span>
+                </div>
+            </div>
+            <!-- Text bubble -->
+            <div class="talk-arrow"></div>
+            <div class="bubble">
+                <div class="textbubble startGame">Welcome to <br>my Lily Pad<br>game!</div>
+                
+            </div>
+            <span class="inner-circle">
+            <!--Lili flower-->
+            <span class="flowerleaftop"></span>
+            <span class="flowerleaftopright"></span>
+            <span class="flowerleafright"></span>
+            <span class="flowerleafbottomright"></span>
+            <span class="flowerleafbottom"></span>
+            <span class="flowerleafbottomleft"></span>
+            <span class="flowerleafleft"></span>
+            <span class="flowerleaftopleft"></span>
+            <!--score counter-->
+            <div class="counter"><div class="score"></div></div>
+            </span>
         </div>
-        <span class="inner-circle">
-          <!--Lili flower-->
-          <span class="flowerleaftop"></span>
-          <span class="flowerleaftopright"></span>
-          <span class="flowerleafright"></span>
-          <span class="flowerleafbottomright"></span>
-          <span class="flowerleafbottom"></span>
-          <span class="flowerleafbottomleft"></span>
-          <span class="flowerleafleft"></span>
-          <span class="flowerleaftopleft"></span>
-          <!--score counter-->
-          <div class="counter"><div class="score"></div></div>
-        </span>
-    </div>
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="script.js"></script>

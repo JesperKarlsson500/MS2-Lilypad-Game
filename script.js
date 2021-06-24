@@ -25,20 +25,19 @@
     const ambianceButton = document.querySelector("#ambiance-on-off");
     const scoreCounter = document.querySelector(".score");
 
-    /* Frogeye mousemovements */ 
-    document.onmousemove = function () {
-        let x = event.clientX * 100 / window.innerWidth + "%";
-        let y = event.clientY * 100 / window.innerHeight + "%";
-        
-        for(let i = 0; i < 1; i++) {
-            console.log(i);
-            lefteye[i].style.left = x;
-            lefteye[i].style.top = y;
+/* Frogeye mousemovements */ 
+document.onmousemove = function () {
+    let x = event.clientX * 100 / window.innerWidth + "%";
+    let y = event.clientY * 100 / window.innerHeight + "%";
+    for(let i = 0; i < 1; i++) {
+        console.log(i);
+        lefteye[i].style.left = x;
+        lefteye[i].style.top = y;
 
-            righteye[i].style.left = x;
-            righteye[i].style.top = y;
-        }
-    };
+        righteye[i].style.left = x;
+        righteye[i].style.top = y;
+    }
+};
 
 ambianceButton.addEventListener('click', () => {
     if (ambianceButton.checked == true) {
@@ -49,7 +48,6 @@ ambianceButton.addEventListener('click', () => {
         ambiance.pause();
     }
 });
-
 
 onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
@@ -78,16 +76,13 @@ function play() {
   good = true;
   for (let i = 0; i < 15; i++) {
   order.push(Math.floor(Math.random() * 6) + 1);
-    console.log(order);
-}
+  }
   compTurn = true;
-
   intervalId = setInterval(gameTurn, 1000);
 }
 
 function gameTurn() {
   //on = false; //player will not be able to click any buttons.
-    
   if (flash == score) {
     clearInterval(intervalId);
     compTurn = false;
@@ -98,7 +93,7 @@ function gameTurn() {
   if (compTurn) {
     clearColors();
     setTimeout(() => {
-      if (order[flash] == 1) one(); //if the first item in the array is one
+      if (order[flash] == 1) one();
       if (order[flash] == 2) two();
       if (order[flash] == 3) three();
       if (order[flash] == 4) four();
@@ -205,7 +200,6 @@ function flashgreen() {
     topLeft.style.backgroundColor = "var(--flashforestgreen)";
 }
 
-
 topRight.addEventListener('click', () => {
   if (on) {
     playerOrder.push(1);
@@ -305,7 +299,6 @@ function check() {
       play();
       talkBubble.innerHTML = "Jump after me!";
     }, 3000);
-    
     noise = false;
     
   }   

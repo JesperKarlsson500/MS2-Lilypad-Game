@@ -10,13 +10,11 @@
     let intervalId;
     let on = false;
     let noise = true;
-	let ambiance;
+    let ambiance;
 
     const talkBubble = document.querySelector(".textbubble");
-
     const righteye = document.getElementsByClassName("rightiris");
     const lefteye = document.getElementsByClassName("leftiris");
-    
     const topRight = document.querySelector(".top-right");
     const right = document.querySelector(".right");
     const bottomRight = document.querySelector(".bottom-right");
@@ -31,8 +29,9 @@
     document.onmousemove = function () {
         let x = event.clientX * 100 / window.innerWidth + "%";
         let y = event.clientY * 100 / window.innerHeight + "%";
-
-        for(let i = 0; i < 2; i++) {
+        
+        for(let i = 0; i < 1; i++) {
+            console.log(i);
             lefteye[i].style.left = x;
             lefteye[i].style.top = y;
 
@@ -289,7 +288,7 @@ function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1]) 
     good = false;
 
-  if (playerOrder.length == 10 && good) {
+  if (playerOrder.length == 2 && good) {
     winGame();
   }
 
@@ -319,7 +318,7 @@ function winGame() {
     clearColors();
     let yaaykids = document.getElementById("yaykids");
     yaaykids.play();
-    talkBubble.innerHTML = "RABBIT!<br>WOOOW!";
+    talkBubble.innerHTML = "YAAAY!";
     scoreCounter.innerHTML = "WIN!";
     on = false;
     win = true;

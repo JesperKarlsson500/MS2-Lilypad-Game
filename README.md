@@ -3,7 +3,7 @@
 This project is created to help anyone improve their memory while having a fun time.
 With a cute and simple design and an easy to use layout.
 
-The Lilypad game challenges the user to remember patterns. In the game there are six colored 
+The Lily pad game challenges the user to remember patterns. In the game there are six colored 
 lily pads that light up in randomly generated patterns. The user will repeat the patterns 
 shown by pressing the lily pads in the same order. 
 
@@ -17,7 +17,7 @@ In the game there are 15 levels, If the user successfully completes all 15 level
 
 ![Showcase-screenshot](assets/img/Lilypadgamepicture.jpg)
 
-A deployed version of my game can be found [here.](https://jesperkarlsson500.github.io/ Fill this part in)
+A deployed version of my game can be found [here.](https://jesperkarlsson500.github.io/MS2-Lilypad-Game/)
 ## Navigation
 
 * [UX](#ux)
@@ -33,7 +33,7 @@ A deployed version of my game can be found [here.](https://jesperkarlsson500.git
     + [Future-features](#futere-features)
 * [Technologies](#technologies)
 * [Testing](#testing)
-+ [Testing-plan](#testing-plan)
+  + [Testing-plan](#testing-plan)
   + [Implementation](#implementation)
   + [Results](#results)
 * [Bugs](#bugs)
@@ -58,7 +58,7 @@ when clicked.
 * As a user I want to easily pick up how the game works
 * As a user I want to see how good my memory is.
 
-A user for my Lilypad game is looking to improve their memory and have fun doing it.
+A user for my Lily pad game is looking to improve their memory and have fun doing it.
 
 ## Strategy
 <hr>
@@ -74,27 +74,27 @@ I need to test it with the targeted audiance, to see their reactions
 and if it's something they want.
 
 ## Scope
-I want the user to be happy in a relaxed learning inviroment
+I want the user to have fun in a relaxed learning inviroment.
 
 ## Structure
 The game is made up of one page. 
-It consists of six lilypads that light up in a randomized pattern. Every turn 
-you complete the pattern increases by one until you reach the score of 15. 
+A frog that is the games host, the frog has it's eyes on the mouse at all times. 
+If you play on mobile the frog looks were the user clicks.
+It consists of six lily pads that light up in a randomized pattern. 
+Every turn you complete the pattern increases by one until you reach the score of 15. 
 At 15 you won the game.
 
 ## Wireframes
 <hr>
 
-I started making the game to look like the Simon game
+I started making the game to look like the Simon game.
 
 ![Wireframe](assets/img/Simonwireframe.png)
 
-I later on changed the look and and layout to be more unique.
+### Changes to wireframes
+I later on changed the game, look and and layout to be more unique.
 
 ![Wireframe](assets/img/LilyPadWireframe.jpg)
-### Changes to wireframes
-
-
 
 ## Original ideas
 <hr>
@@ -113,7 +113,7 @@ This would be more pleasing to look at and also make the game more sellable
 * on/off button for the ambiant music.
 * Score counter if the middle of the lilyflower that increments after each succesful turn.
 * after reaching 15 turns you win the game and "WIN!" will show up to replace the numbers
-* All lilypads will flash their colors if you win the game (currently not working)
+* All lily pads will flash their colors if you win the game (currently not working)
 * A frog that introduces you to the game and keeps it's eyes on the mouse.
 
 
@@ -136,11 +136,11 @@ Changed splash sound on the red and yellow leaf since they sounded a bit harsh.
 
 The game doesn't reset when the win condition is met, So I need to fix that.
 
-I found so far that if you win the game nothing happens. I will look into this.
+While testing I found that the game stopped working after reaching 3 loops. I typed in console.log(order); To find that 
+I had set the play function to (let i = 0; i < 3; i++). I forgot to turn it back to 15 as it should be.
 
-The game's score counter only went up to four. I typed in console.log(order); 
-to find out that the for loop only looped three times. 
-In the for loop I had type in i < 3, so I changed it back to i < 15 as it should be.
+In Chrome devtools I found "Uncaught TypeError: Cannot read property 'style' of undefined (script.js:37)"
+In the for loop I changed: i < 2; to i < 1; that removed the 'style' undefined error.
 
 ### Testing plan
 
@@ -149,13 +149,19 @@ Any problems that comes up I will.
 
 ### Implementation
 
+I used Lighthouse to check the performance on both mobile and desktop and search for errors.
+I used W3C code validator for both CSS and HTML. I test all my link to check that they're working.
+I used JSHint to search through my Javascript code.
+
 #### When using code validator I found:
 
-JSHint found a lot of cases were I had forgotten semicolon after a return statement. 
-Also three unused variables and one missing. 
+JSHint found missing semicolons after return statements. Three unused variables and one missing. 
 
+9 Problems with launch.json and settings.json. I get this in every project I open.
 ## Results
 <hr>
+
+I added /*jshint esversion: 6 */ at the top of my scipt.js to remove warning/error at JSHint validator.
 
 ## Bugs
 <hr>
@@ -167,27 +173,37 @@ The speed of the whole game changes and a restart is needed to solve the problem
 ## Deployment
 <hr>
 
+This project is deployed using GitPod and GitHub. I used GitPod to code everything and GitHub 
+to deploy the website and make it go live.
+
+I used these three steps to deploy my website:
+
+1. Click on settings tab on my repository.
+2. Click the pages tab.
+3. Set source branch to master. In the green field you will see the link to the live website.
+
 ## Credit
 <hr>
+
+* Inspiration and code used from this free youtube tutorial [freeCodeCamp.org.](https://www.youtube.com/watch?v=n_ec3eowFLQ)
+* Sound effect taken from youtube [Link here.](https://www.youtube.com/watch?v=WS_3OCcKiJ0)
+* Moving eye effect taken from youtube [link here.](https://www.youtube.com/watch?v=AixAmLWzXYg)
+* Yaykids sound effect taken from youtube [link here.](https://www.youtube.com/watch?v=_Z3ra0CxCE0)
+* README template from code institute. [README.md template](https://github.com/Code-Institute-Solutions/readme-template).
+* Custom favicon created at [favicon.io.](https://favicon.io/favicon-generator/)
 
 ## Media
 <hr>
 
-* Sound effect taken from youtube [Link here.](https://www.youtube.com/watch?v=WS_3OCcKiJ0)
-
-* Moving eye effect taken from youtube [link here.](https://www.youtube.com/watch?v=AixAmLWzXYg)
-
-* Yaykids sound effect taken from youtube [link here.](https://www.youtube.com/watch?v=_Z3ra0CxCE0)
-
 * Cut and modified the sounds myself in the program Ableton live.
-
-* README template from code institute. [README.md template](https://github.com/Code-Institute-Solutions/readme-template).
-
-* Custom favicon created at [favicon.io.](https://favicon.io/favicon-generator/)
 
 ## Acknowledgements
 <hr>
 
-**This project was created for educational purposes only, credit for all images goes to their owners**
+I want to thank my mentor Antonija Simic for helping and supporting me. She made me see things from new 
+perspectives and asked me questions to help me think better. She gave me advice and links 
+where I could find more information.
+
+**This project was created for educational purposes only, credit for any code and sounds used goes to all their rightful owners**
 
 **Created by Jesper Karlsson**

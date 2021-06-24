@@ -1,3 +1,5 @@
+    /*jshint esversion: 6 */
+    
     let order = [];
     let playerOrder = [];
     let flash;
@@ -6,12 +8,9 @@
     let score;
     let win;
     let intervalId;
-    let start = false;
-    let colors = [];
     let on = false;
     let noise = true;
-    
-    const startGame = document.getElementsByClassName("bubble");
+	let ambiance;
 
     const talkBubble = document.querySelector(".textbubble");
 
@@ -40,7 +39,7 @@
             righteye[i].style.left = x;
             righteye[i].style.top = y;
         }
-    }
+    };
 
 ambianceButton.addEventListener('click', () => {
     if (ambianceButton.checked == true) {
@@ -216,10 +215,10 @@ topRight.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 400)
+      }, 400);
     }
   }
-})
+});
 
 right.addEventListener('click', () => {
   if (on) {
@@ -229,10 +228,10 @@ right.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 400)
+      }, 400);
     }
   }
-})
+});
 
 bottomRight.addEventListener('click', () => {
   if (on) {
@@ -242,10 +241,10 @@ bottomRight.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 400)
+      }, 400);
     }
   }
-})
+});
 
 bottomLeft.addEventListener('click', () => {
   if (on) {
@@ -255,10 +254,10 @@ bottomLeft.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 400)
+      }, 400);
     }
   }
-})
+});
 
 left.addEventListener('click', () => {
   if (on) {
@@ -268,10 +267,10 @@ left.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 400)
+      }, 400);
     }
   }
-})
+});
 
 topLeft.addEventListener('click', () => {
   if (on) {
@@ -281,10 +280,10 @@ topLeft.addEventListener('click', () => {
     if(!win) {
       setTimeout(() => {
         clearColors();
-      }, 400)
+      }, 400);
     }
   }
-})
+});
 
 function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1]) 
@@ -343,26 +342,26 @@ function winGame() {
         flashgreen();
     }, 1500);
     setTimeout(() => {
-        clearColors()
+        clearColors();
         talkBubble.innerHTML = "Let's play again!";
     }, 2000);
     setTimeout(() => {
-        flashColor()
+        flashColor();
     }, 2250);
     setTimeout(() => {
-        clearColors()
+        clearColors();
     }, 2500);
     setTimeout(() => {
-        flashColor()
+        flashColor();
     }, 2750);
     setTimeout(() => {
-        clearColors()
+        clearColors();
     }, 3000);
     setTimeout(() => {
-        flashColor()
+        flashColor();
     }, 3250);
     setTimeout(() => {
-        clearColors()
-        play()
+        clearColors();
+        play();
     }, 3500);
 }

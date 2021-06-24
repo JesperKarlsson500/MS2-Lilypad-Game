@@ -288,18 +288,23 @@ function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1]) 
     good = false;
 
-  if (playerOrder.length == 2 && good) {
+  if (playerOrder.length == 15 && good) {
     winGame();
   }
 
   if (good == false) {
     flashColor();
-    scoreCounter.innerHTML = "OPS!";
+    scoreCounter.innerHTML = "";
+    talkBubble.innerHTML = "OOPS!";
+    setTimeout(() => {
+        talkBubble.innerHTML = "Try again!";
+    }, 1500);
     setTimeout(() => {
       scoreCounter.innerHTML = score;
       clearColors();
       play();
-    }, 600);
+      talkBubble.innerHTML = "Jump after me!";
+    }, 3000);
     
     noise = false;
     

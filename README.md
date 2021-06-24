@@ -7,10 +7,10 @@ The Lily pad game challenges the user to remember patterns. In the game there ar
 lily pads that light up in randomly generated patterns. The user will repeat the patterns 
 shown by pressing the lily pads in the same order. 
 
-When pressing the start button the game begins with one random lily pad lighting. If the 
-user clicks on the same lily pad as the computer, they have completed that level and moves 
-to the next. After a completed level, another random lily pad will be added and to the pattern. 
-Now the user needs to remember and follow the old patterns and the new to complete the level. 
+When pressing the start button the game begins with one random lily pad lighing flashing. If the 
+user clicks on that lily pad, they have completed that level and moves to the next. 
+After a completed level, another random lily pad will be added to the pattern. 
+Now the user needs to remember the old patterns and the new. Click them in the right order to complete the level. 
 In the game there are 15 levels, If the user successfully completes all 15 levels they win the game.
 
 ## Showcase
@@ -45,9 +45,9 @@ A deployed version of my game can be found [here.](https://jesperkarlsson500.git
 ## UX
 <hr>
 The purpose of this game is to help anyone improve their memory while having a good time. 
-Put on the ambiant music in the game, sit back, relax and follow the frog from lily to lily. 
+Put on the ambiant lake sounds in the game, sit back, relax and jump from lily to lily. 
 To help the user remember what lily pad to jumped to, they are all colored differently and have a unique splash sound
-when clicked.
+when clicked. If you win the game you will be rewarded with a light show and happy cheers!
 
 
 ### UX Stories
@@ -78,7 +78,7 @@ I want the user to have fun in a relaxed learning inviroment.
 
 ## Structure
 The game is made up of one page. 
-A frog that is the games host, the frog has it's eyes on the mouse at all times. 
+When the game is loaded you will be greeted by a frog. The frog keeps a lookout and checks every move you make. 
 If you play on mobile the frog looks were the user clicks.
 It consists of six lily pads that light up in a randomized pattern. 
 Every turn you complete the pattern increases by one until you reach the score of 15. 
@@ -114,8 +114,8 @@ This would be more pleasing to look at and also make the game more sellable
 * Score counter if the middle of the lilyflower that increments after each succesful turn.
 * after reaching 15 turns you win the game and "WIN!" will show up to replace the numbers
 * All lily pads will flash their colors if you win the game (currently not working)
-* A frog that introduces you to the game and keeps it's eyes on the mouse.
-
+* A frog that introduces you to the game and keeps it's eyes on every move that you make.
+* If you fail the frog encurages you to try again.
 
 ## Technologies
 <hr>

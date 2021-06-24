@@ -132,6 +132,40 @@ This project was build using the following technologies:
 
 ## Testing
 <hr>
+
+### Testing plan
+
+My goal is to create a site that that works on desktop mainly.
+
+### Implementation
+
+In my tests I used Chrome DevTools, Checking through different resolutions and devices. 
+I used Lighthouse to check the performance on both mobile and desktop and search for errors.
+I used W3C code validator for both CSS and HTML. I test all my functions and checkboxes to make sure they're working.
+I used JSHint to search through my Javascript code.
+
+### Future improvements
+
+I want to dry up the code and make it more compact. Trying to figure out how everything works took a lot 
+of time so I ended up not drying up any code at all. I want to make the game responsive so the user can 
+use it on mobile aswell without any problems.
+
+#### When using code validator I found:
+
+JSHint found missing semicolons after return statements. Three unused variables and one missing. 
+9 Problems with launch.json and settings.json. This I get in every project I open so it's probably an update thing.
+
+## Results
+<hr>
+
+I added /*jshint esversion: 6 */ at the top of my scipt.js to remove warning/error at JSHint validator.
+
+## Bugs
+<hr>
+
+Sometimes If I click the lilys very fast the game bugs and lilys that are no supposed to be flashing are. 
+And the speed of the whole game changes and a restart is needed to solve the problem.
+
 Changed splash sound on the red and yellow leaf since they sounded a bit harsh. 
 
 While testing I found that the game stopped working after reaching 3 loops. I typed in console.log(order); To find that 
@@ -143,36 +177,6 @@ In the for loop I changed: i < 2; to i < 1; that removed the 'style' undefined e
 Moved the variable ambiance = document.getElementById("ambiance"); out of the if statement. 
 Changed it into a const and put it next to all other consts. This fixed the problem that the pause function did not work.
 Problem was that the ambiance variable was only read by the if (ambianceButton.checked == true).
-
-### Testing plan
-
-My main plan is to play the game and make sure it works on desktop.
-
-### Implementation
-
-I used Lighthouse to check the performance on both mobile and desktop and search for errors.
-I used W3C code validator for both CSS and HTML. I test all my functions and checkboxes to make sure they're working.
-I used JSHint to search through my Javascript code.
-
-### Future improvements
-I want to dry up the code and make it more compact. Trying to figure out how everything works took a lot 
-of time so I ended up not drying up any code at all.
-
-#### When using code validator I found:
-
-JSHint found missing semicolons after return statements. Three unused variables and one missing. 
-
-9 Problems with launch.json and settings.json. I get this in every project I open.
-## Results
-<hr>
-
-I added /*jshint esversion: 6 */ at the top of my scipt.js to remove warning/error at JSHint validator.
-
-## Bugs
-<hr>
-
-Sometimes If I click the lilys very fast the game bugs and lilys that are no supposed to be flashing are. 
-And the speed of the whole game changes and a restart is needed to solve the problem.
 
 ## Deployment
 <hr>
@@ -199,14 +203,13 @@ I used these three steps to deploy my website:
 ## Media
 <hr>
 
-* Cut and modified the sounds myself in the program Ableton live.
+* Cut and modified the sounds myself in the DAW Ableton live.
 
 ## Acknowledgements
 <hr>
 
-I want to thank my mentor Antonija Simic for helping and supporting me. She made me see things from new 
-perspectives and asked me questions to help me think better. She gave me advice and links 
-where I could find more information.
+I want to thank my mentor Antonija Simic for helping and supporting me. She gave me advice and links 
+where I could good information.
 
 **This project was created for educational purposes only, credit for any code and sounds used goes to all their rightful owners**
 

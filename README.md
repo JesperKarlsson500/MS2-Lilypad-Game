@@ -128,6 +128,7 @@ This project was build using the following technologies:
 * Jigsaw W3C validator: Validated and tested my CSS.
 * W3C Markup validator: Validated and tested my HTML.
 * Used [this.](https://favicon.io/favicon-generator/) to create my favicon.
+* Used JSHint to find warnings and errors in my JS code.
 
 ## Testing
 <hr>
@@ -144,11 +145,14 @@ In the for loop I had type in i < 3, so I changed it back to i < 15 as it should
 ### Testing plan
 
 My testing plan is to play the game and make sure it works on desktop.
-Any problems that comes up I will 
+Any problems that comes up I will.
 
 ### Implementation
 
 #### When using code validator I found:
+
+JSHint found a lot of cases were I had forgotten semicolon after a return statement. 
+Also three unused variables and one missing. 
 
 ## Results
 <hr>

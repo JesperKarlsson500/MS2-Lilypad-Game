@@ -134,8 +134,6 @@ This project was build using the following technologies:
 <hr>
 Changed splash sound on the red and yellow leaf since they sounded a bit harsh. 
 
-The game doesn't reset when the win condition is met, So I need to fix that.
-
 While testing I found that the game stopped working after reaching 3 loops. I typed in console.log(order); To find that 
 I had set the play function to (let i = 0; i < 3; i++). I forgot to turn it back to 15 as it should be.
 
@@ -173,9 +171,8 @@ I added /*jshint esversion: 6 */ at the top of my scipt.js to remove warning/err
 ## Bugs
 <hr>
 
-Sometimes If I click the lilys very fast the game bugs and start acting real strange. 
-Lilys that are no supposed to be flashed start flashing. 
-The speed of the whole game changes and a restart is needed to solve the problem.
+Sometimes If I click the lilys very fast the game bugs and lilys that are no supposed to be flashing are. 
+And the speed of the whole game changes and a restart is needed to solve the problem.
 
 ## Deployment
 <hr>

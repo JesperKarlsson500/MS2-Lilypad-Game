@@ -10,8 +10,8 @@
     let intervalId;
     let on = false;
     let noise = true;
-    let ambiance;
-
+    
+    const ambiance = document.getElementById("ambiance");
     const talkBubble = document.querySelector(".textbubble");
     const righteye = document.getElementsByClassName("rightiris");
     const lefteye = document.getElementsByClassName("leftiris");
@@ -39,16 +39,18 @@ document.onmousemove = function () {
     }
 };
 
+/* ambiance play or pause */
 ambianceButton.addEventListener('click', () => {
-    if (ambianceButton.checked == true) {
     let ambiance = document.getElementById("ambiance");
+    if (ambianceButton.checked == true) {
         ambiance.play();
     }
     if (ambianceButton.checked == false) {
-        ambiance.stop();
+        ambiance.pause();
     }
 });
 
+/* on / off button */
 onButton.addEventListener('click', () => {
     if (onButton.checked == true) {
         on = true;

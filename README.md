@@ -142,6 +142,10 @@ I had set the play function to (let i = 0; i < 3; i++). I forgot to turn it back
 In Chrome devtools I found "Uncaught TypeError: Cannot read property 'style' of undefined (script.js:37)"
 In the for loop I changed: i < 2; to i < 1; that removed the 'style' undefined error.
 
+Moved the variable ambiance = document.getElementById("ambiance"); out of the if statement. 
+Changed it into a const and put it next to all other consts. This fixed the problem that the pause function did not work.
+Problem was that the ambiance variable was only read by the if (ambianceButton.checked == true).
+
 ### Testing plan
 
 My main plan is to play the game and make sure it works on desktop.
@@ -151,6 +155,10 @@ My main plan is to play the game and make sure it works on desktop.
 I used Lighthouse to check the performance on both mobile and desktop and search for errors.
 I used W3C code validator for both CSS and HTML. I test all my functions and checkboxes to make sure they're working.
 I used JSHint to search through my Javascript code.
+
+### Future improvements
+I want to dry up the code and make it more compact. Trying to figure out how everything works took a lot 
+of time so I ended up not drying up any code at all.
 
 #### When using code validator I found:
 

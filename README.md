@@ -30,11 +30,11 @@ A deployed version of my game can be found [here.](https://jesperkarlsson500.git
   + [Changes](#changes-to-wireframes)
 * [Features](#features)
     + [Existing-features](#existing-features)
-    + [Future-features](#futere-features)
+    + [Future-features](#future-features)
 * [Technologies](#technologies)
 * [Testing](#testing)
   + [Testing-plan](#testing-plan)
-  + [Implementation](#implementation)
+  + [Implementations](#implementations)
   + [Results](#results)
 * [Bugs](#bugs)
 * [Deployment](#deployment)
@@ -74,12 +74,14 @@ I need to test it with the targeted audiance, to see their reactions
 and if it's something they want.
 
 ## Scope
+<hr>
 I want the user to have fun in a relaxed learning inviroment.
 
 ## Structure
+<hr>
 The game is made up of one page. 
 When the game is loaded you will be greeted by a frog. The frog keeps a lookout and checks every move you make. 
-If you play on mobile the frog looks were the user clicks.
+If you play on mobile the frog only looks were you click since there is no mouse.
 It consists of six lily pads that light up in a randomized pattern. 
 Every turn you complete the pattern increases by one until you reach the score of 15. 
 At 15 you won the game.
@@ -109,6 +111,8 @@ This would be more pleasing to look at and also make the game more fun and sella
 ## Features
 <hr>
 
+### Existing features
+
 * on/off game checkbox.
 * on/off checkbox for the ambiant music.
 * Score counter if the middle of the lilyflower that increments after each succesful turn.
@@ -116,6 +120,12 @@ This would be more pleasing to look at and also make the game more fun and sella
 * All lily pads will flash their colors from red to green clockwise and then all flash 3 times if you win the game.
 * A frog that introduces you to the game and keeps it's eyes on every move that you make.
 * If you fail the frog encurages you to try again.
+
+### Future features
+
+I want to dry up the code and make it more compact. Trying to figure out how everything works took a lot 
+of time so I ended up not drying up any code at all. I want to make the game responsive so the user can 
+use it on mobile as well without any problems.
 
 ## Technologies
 <hr>
@@ -137,18 +147,12 @@ This project was build using the following technologies:
 
 My goal is to create a site that that works on desktop mainly.
 
-### Implementation
+### Implementations
 
 In my tests I used Chrome DevTools, Checking through different resolutions and devices. 
 I used Lighthouse to check the performance on both mobile and desktop and search for errors.
 I used W3C code validator for both CSS and HTML. I test all my functions and checkboxes to make sure they're working.
 I used JSHint to search through my Javascript code.
-
-### Future improvements
-
-I want to dry up the code and make it more compact. Trying to figure out how everything works took a lot 
-of time so I ended up not drying up any code at all. I want to make the game responsive so the user can 
-use it on mobile aswell without any problems.
 
 #### When using code validator I found:
 
@@ -190,7 +194,7 @@ I used these three steps to deploy my website:
 2. Click the pages tab.
 3. Set source branch to master. In the green field you will see the link to the live website.
 
-## Credit
+## Credits
 <hr>
 
 * Inspiration and code used from this free youtube tutorial [freeCodeCamp.org.](https://www.youtube.com/watch?v=n_ec3eowFLQ)
@@ -211,6 +215,6 @@ I used these three steps to deploy my website:
 I want to thank my mentor Antonija Simic for helping and supporting me. She gave me advice and links 
 where I could good information.
 
-**This project was created for educational purposes only, credit for any code and sounds used goes to all their rightful owners**
+**This project was created for educational purposes only. Any code or sound used that is not by me is credited to their rightful owners**
 
 **Created by Jesper Karlsson**
